@@ -285,16 +285,91 @@ a {
   border: 1px solid var(--line);
   background: var(--surface);
   border-radius: 12px;
-  padding: 18px;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.project-tile-image {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-tile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-tile h3 {
   font-size: 1.45rem;
-  margin-bottom: 8px;
 }
 
 .project-tile p {
   color: var(--muted);
+}
+
+.project-tech-heading {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.project-tech-list {
+  margin-left: 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 4px;
+}
+
+.project-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.project-box-button {
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.project-box-button:hover,
+.project-box-button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.github-button {
+  color: #d8deea;
+  background: rgba(20, 24, 35, 0.95);
+}
+
+.github-button:hover,
+.github-button:focus-visible {
+  border-color: #7ea1ff;
+  color: #c8d7ff;
+}
+
+.itch-button {
+  color: #ffd9df;
+  background: rgba(61, 20, 34, 0.86);
+}
+
+.itch-button:hover,
+.itch-button:focus-visible {
+  border-color: #ff6b93;
+  color: #ffe3ea;
 }
 
 footer {
@@ -344,6 +419,10 @@ footer {
   }
 
   .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links {
     grid-template-columns: 1fr;
   }
 }
