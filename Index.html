@@ -7,53 +7,137 @@
       name="description"
       content="Portfolio of a game developer and programmer."
     />
-    <title>Portfolio</title>
+    <title>Jared Akigbesote | Game Developer Portfolio</title>
     <link rel="stylesheet" href="Assets/Css/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Jared Akigbesote</h1>
-      <h2 id="subtitle">Game Developer & Programmer</h2>
-      <hr class="divider" />
-      <nav>
-        <ul id="navbar">
-          <li class="nav-item"><a href="Games">Games</a></li>
-          <li class="nav-item"><a href="Software">Software</a></li>
-          <li class="nav-item"><a href="About">About</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand-block">
+          <h1>Jared Akigbesote</h1>
+          <p id="subtitle">Game Developer & Programmer</p>
+        </div>
+        <nav aria-label="Primary navigation">
+          <ul id="navbar">
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+     <!-- Main -->
     <main>
-      <section id="Welcome">
-        <h2 id="welcome-heading">Welcome To My Portfolio</h2>
-        <div class="profile-image">
+      <section id="welcome" class="hero-section">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Unity | C# | Gameplay Systems</p>
+            <h2 id="welcome-heading">Building Playful Worlds Through Code</h2>
+            <p class="hero-description">
+              I create game prototypes and polished experiences that focus on
+              satisfying gameplay, clean architecture, and meaningful player
+              feedback.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">View Projects</a>
+              <a class="button button-secondary" href="#contact">Get In Touch</a>
+            </div>
+          </div>
+
+          <article class="featured-project-box" aria-label="Featured project">
+            <div class="featured-project-image">
+              <img
+                src="Assets/Images/featured-project.png"
+                alt="Screenshot of featured project"
+              />
+            </div>
+            <div class="featured-project-tag">Featured Project</div>
+            <h3>Realm Of Ardga</h3>
+            <p>
+              Realm Of Ardga is a 
+            </p>
+            <a href="#projects" class="project-link">View Project Details -></a>
+          </article>
+        </div>
+      </section>
+
+      <!-- About Section -->
+
+      <section id="about" class="content-section">
+        <div class="container about-grid">
+          <h2>About Me</h2>
           <div class="profile-text-container">
             <p id="profile-text">
-              I'm a passionate game developer and programmer that aims to create
-              fun, unique and engaging gaming experiences through code. Growing
-              up i always had a passion for games and technology and the ways
-              they can leave a lasting impact on the player and create memories
-              that can be cherished. In this portfolio you will find a
-              collection of my work, including games and software projects that
-              i have developed over the years. Each project showcases different
-              aspects of my skills and creativity, from game design and
-              programming to problem-solving and innovation. I hope you enjoy
-              exploring my work and feel free to reach out if you have any
-              questions. Thank you for visting my portfolio.
+              I am a passionate game developer and programmer who enjoys
+              creating fun, engaging, and memorable experiences through code.
+              Ever since I was young, I have been fascinated by games and
+              technology, and by how interactive experiences can challenge,
+              inspire, and leave a lasting impact on players.
+            </p>
+            <p id="profile-text-secondary">
+              This portfolio showcases projects that reflect my growth,
+              including 2D and 3D games built with Unity and C#. Each project
+              has been an opportunity to learn new skills, overcome technical
+              challenges, and sharpen my understanding of game development.
             </p>
           </div>
         </div>
       </section>
+       <!-- Projects Section -->
+      <section id="projects" class="content-section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <article class="project-tile">
+              <h3>Prototype 01</h3>
+              <p>Fast-paced gameplay prototype focused on movement feel.</p>
+            </article>
+            <article class="project-tile">
+              <h3>Prototype 02</h3>
+              <p>System-heavy build with AI behaviors and level scripting.</p>
+            </article>
+            <article class="project-tile">
+              <h3>Prototype 03</h3>
+              <p>Stylized 3D experience with interaction-driven mechanics.</p>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <div>
-        <h2>Contact Information</h2>
-        <nav>
-          <ul>
-            <li class="nav-item">Email</li>
-            <li class="nav-item">LinkedIn</li>
-            <li class="nav-item">GitHub</li>
-            <li class="nav-item">Itch.io</li>
+    <!-- Contact Section -->
+    <footer id="contact">
+      <div class="container">
+        <h2 id="contact-heading">Contact Information</h2>
+        <nav aria-label="Contact links">
+          <ul id="contact-bar">
+            <li class="nav-item">
+              <a href="mailto:your-jakigbesotewm@gmail.com">Email</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://www.linkedin.com/in/your-linkedin-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://github.com/your-github-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://your-itch-io-profile.itch.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Itch.io</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
