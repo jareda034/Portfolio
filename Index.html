@@ -9,14 +9,34 @@
     />
     <title>Jared Akigbesote | Game Developer Portfolio</title>
     <link rel="stylesheet" href="Assets/Css/style.css" />
-    <script src="Assets/Js/pixel-bg.js" defer ></script>
+    <script src="Assets/Js/pixel-bg.js" defer></script>
+    <script src="Assets/Js/game-ui.js" defer></script>
   </head>
   <body>
+    <div class="xp-hud" aria-hidden="true">
+      <span class="xp-label">XP</span>
+      <div class="xp-track">
+        <div class="xp-fill" id="xp-fill"></div>
+      </div>
+    </div>
+    <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite"></div>
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand-block">
           <h1>Jared Akigbesote</h1>
           <p id="subtitle">Game Developer & Programmer</p>
+        </div>
+        <div class="hud-stats" aria-label="Status panel">
+          <div class="hud-stat-chip">
+            <span class="hud-dot"></span>
+            <span>Build 1.0.0</span>
+          </div>
+          <div class="hud-stat-chip">
+            <span class="hud-dot hud-dot-warn"></span>
+            <span>Player Online</span>
+          </div>
         </div>
         <nav aria-label="Primary navigation">
           <ul id="navbar">
@@ -333,7 +353,7 @@
             </li>
             <li class="nav-item">
               <a
-                href="https://www.linkedin.com/in/your-linkedin-profile"
+                href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >LinkedIn</a
@@ -341,7 +361,7 @@
             </li>
             <li class="nav-item">
               <a
-                href="https://github.com/your-github-profile"
+                href="https://github.com/jareda034"
                 target="_blank"
                 rel="noopener noreferrer"
                 >GitHub</a
@@ -349,7 +369,7 @@
             </li>
             <li class="nav-item">
               <a
-                href="https://your-itch-io-profile.itch.io"
+                href="https://ping-wing.itch.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Itch.io</a
