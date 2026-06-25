@@ -18,6 +18,11 @@
   box-sizing: border-box;
 }
 
+.site-header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
 body {
   min-height: 100vh;
   color: var(--text);
@@ -108,10 +113,17 @@ a {
 .hero-backdrop {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(rgba(8, 10, 14, 0.4), rgba(8, 10, 14, 0.76)),
-    url(../Images/Profile.jpg) no-repeat center 24% / cover;
+  background: linear-gradient(180deg, rgba(10, 13, 20, 0.6), rgba(7, 10, 16, 0.92));
   transform: scale(1.02);
+}
+
+#hero-pixel-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  pointer-events: none;
 }
 
 .hero-grid {
