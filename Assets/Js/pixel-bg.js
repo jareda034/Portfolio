@@ -15,7 +15,7 @@ const MAX_TRAIL_PARTICLES = 760;
 const TRAIL_LIFE_BASE = 46;
 const TRAIL_LIFE_VARIANCE = 40;
 const particles = [];
-const TRAIL_COLORS = ["#ffd44a", "#ff9f1a", "#fff1a8"];
+const TRAIL_COLORS = ["#6dff6a", "#b8ff72", "#ecff9d"];
 
 function wrap(value, max) {
   return ((value % max) + max) % max;
@@ -68,7 +68,53 @@ function resizeCanvas() {
   canvas.style.width = `${Math.floor(rect.width)}px`;
   canvas.style.height = `${Math.floor(rect.height)}px`;
 
+  if (ctx) {
+    ctx.imageSmoothingEnabled = false;
+  }
+
   resetParticles();
+}
+
+function drawArcadeScene(targetCtx, width, height) {
+  const bgGradient = targetCtx.createLinearGradient(0, 0, 0, height);
+  bgGradient.addColorStop(0, "#102317");
+  bgGradient.addColorStop(0.45, "#07140d");
+  bgGradient.addColorStop(1, "#020704");
+  targetCtx.fillStyle = bgGradient;
+  targetCtx.fillRect(0, 0, width, height);
+
+  const screenGlow = targetCtx.createRadialGradient(
+    width * 0.5,
+    height * 0.48,
+    2,
+    width * 0.5,
+    height * 0.48,
+    width * 0.72,
+  );
+  screenGlow.addColorStop(0, "rgba(88, 210, 110, 0.24)");
+  screenGlow.addColorStop(0.6, "rgba(44, 123, 70, 0.12)");
+  screenGlow.addColorStop(1, "rgba(0, 0, 0, 0)");
+  targetCtx.fillStyle = screenGlow;
+  targetCtx.fillRect(0, 0, width, height);
+
+  const topReflection = targetCtx.createLinearGradient(0, 0, 0, height * 0.35);
+  topReflection.addColorStop(0, "rgba(140, 255, 166, 0.14)");
+  topReflection.addColorStop(1, "rgba(140, 255, 166, 0)");
+  targetCtx.fillStyle = topReflection;
+  targetCtx.fillRect(0, 0, width, height * 0.35);
+
+  const vignette = targetCtx.createRadialGradient(
+    width * 0.5,
+    height * 0.5,
+    width * 0.2,
+    width * 0.5,
+    height * 0.5,
+    width * 0.82,
+  );
+  vignette.addColorStop(0, "rgba(0, 0, 0, 0)");
+  vignette.addColorStop(1, "rgba(0, 0, 0, 0.5)");
+  targetCtx.fillStyle = vignette;
+  targetCtx.fillRect(0, 0, width, height);
 }
 
 function draw() {
@@ -78,38 +124,7 @@ function draw() {
 
   state.t += 0.016;
 
-  const bgGradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  bgGradient.addColorStop(0, "#213a5a");
-  bgGradient.addColorStop(0.42, "#10233b");
-  bgGradient.addColorStop(1, "#060d18");
-  ctx.fillStyle = bgGradient;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  const leftGlow = ctx.createRadialGradient(
-    canvas.width * 0.22,
-    canvas.height * 0.2,
-    2,
-    canvas.width * 0.22,
-    canvas.height * 0.2,
-    canvas.width * 0.5,
-  );
-  leftGlow.addColorStop(0, "rgba(120, 165, 220, 0.24)");
-  leftGlow.addColorStop(1, "rgba(120, 165, 220, 0)");
-  ctx.fillStyle = leftGlow;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  const rightGlow = ctx.createRadialGradient(
-    canvas.width * 0.84,
-    canvas.height * 0.35,
-    2,
-    canvas.width * 0.84,
-    canvas.height * 0.35,
-    canvas.width * 0.42,
-  );
-  rightGlow.addColorStop(0, "rgba(48, 108, 182, 0.2)");
-  rightGlow.addColorStop(1, "rgba(48, 108, 182, 0)");
-  ctx.fillStyle = rightGlow;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  drawArcadeScene(ctx, canvas.width, canvas.height);
 
   for (let i = particles.length - 1; i >= 0; i -= 1) {
     const p = particles[i];
@@ -134,10 +149,43 @@ function draw() {
 
   ctx.globalAlpha = 1;
 
-  ctx.fillStyle = "rgba(3, 9, 18, 0.2)";
+  const scanlineFlicker = 0.18 + ((Math.sin(state.t * 9.6) + 1) * 0.5) * 0.08;
+  ctx.fillStyle = `rgba(4, 10, 6, ${scanlineFlicker.toFixed(3)})`;
   for (let y = 0; y < canvas.height; y += 2) {
     ctx.fillRect(0, y, canvas.width, 1);
   }
+
+  ctx.fillStyle = "rgba(120, 255, 150, 0.05)";
+  for (let y = 1; y < canvas.height; y += 6) {
+    ctx.fillRect(0, y, canvas.width, 1);
+  }
+
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  ctx.globalAlpha = 0.13;
+  ctx.filter = "blur(1.2px)";
+  ctx.drawImage(canvas, 0, 0);
+  ctx.restore();
+
+  const glassSheen = ctx.createLinearGradient(0, 0, canvas.width, canvas.height * 0.65);
+  glassSheen.addColorStop(0, "rgba(210, 255, 225, 0.16)");
+  glassSheen.addColorStop(0.28, "rgba(175, 255, 206, 0.06)");
+  glassSheen.addColorStop(0.55, "rgba(160, 250, 196, 0)");
+  ctx.fillStyle = glassSheen;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  const glassHotspot = ctx.createRadialGradient(
+    canvas.width * 0.28,
+    canvas.height * 0.16,
+    2,
+    canvas.width * 0.28,
+    canvas.height * 0.16,
+    canvas.width * 0.36,
+  );
+  glassHotspot.addColorStop(0, "rgba(210, 255, 228, 0.1)");
+  glassHotspot.addColorStop(1, "rgba(210, 255, 228, 0)");
+  ctx.fillStyle = glassHotspot;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   requestAnimationFrame(draw);
 }
