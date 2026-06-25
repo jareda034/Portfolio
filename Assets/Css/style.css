@@ -314,6 +314,23 @@ a {
   color: var(--muted);
 }
 
+.video-fallback {
+  margin: 10px 16px 0;
+  font-size: 0.8rem;
+  color: #b6c0d3;
+}
+
+.video-fallback a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.video-fallback a:hover,
+.video-fallback a:focus-visible {
+  color: var(--accent-strong);
+}
+
 .project-link {
   margin: 12px 16px 18px;
   text-decoration: none;
