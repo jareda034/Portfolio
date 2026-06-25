@@ -260,6 +260,18 @@ a {
   background: rgba(10, 12, 16, 0.5);
 }
 
+.button-cv {
+  border-color: rgba(121, 242, 143, 0.45);
+  background: rgba(22, 49, 33, 0.56);
+  color: #cbf6d5;
+}
+
+.button-cv:hover,
+.button-cv:focus-visible {
+  border-color: rgba(160, 255, 186, 0.8);
+  box-shadow: 0 0 16px rgba(121, 242, 143, 0.35);
+}
+
 .featured-project-box {
   justify-self: end;
   max-width: 390px;
