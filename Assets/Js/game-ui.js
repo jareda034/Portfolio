@@ -111,10 +111,47 @@ function initGameCursor() {
   tick();
 }
 
+function initProjectTileButtons() {
+  const clickableTiles = document.querySelectorAll(".project-tile[data-project-url]");
+
+  clickableTiles.forEach((tile) => {
+    const targetUrl = tile.getAttribute("data-project-url");
+    if (!targetUrl) {
+      return;
+    }
+
+    const title = tile.querySelector("h3")?.textContent?.trim();
+    tile.setAttribute("role", "button");
+    tile.setAttribute("tabindex", "0");
+    tile.setAttribute("aria-label", title ? `Open ${title} project page` : "Open project page");
+
+    const navigateToProject = () => {
+      window.location.href = targetUrl;
+    };
+
+    tile.addEventListener("click", (event) => {
+      const interactiveTarget = event.target.closest("a, button, input, select, textarea, [role='button']");
+      if (interactiveTarget && interactiveTarget !== tile) {
+        return;
+      }
+
+      navigateToProject();
+    });
+
+    tile.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        navigateToProject();
+      }
+    });
+  });
+}
+
 window.addEventListener("scroll", updateXpBar, { passive: true });
 window.addEventListener("resize", updateXpBar);
 
 updateXpBar();
 initRevealAnimations();
 initAchievements();
+initProjectTileButtons();
 initGameCursor();
