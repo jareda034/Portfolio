@@ -412,6 +412,7 @@ a {
   border-radius: 12px;
   padding: 16px;
   display: grid;
+  align-content: start;
   gap: 10px;
   position: relative;
   overflow: hidden;
@@ -503,15 +504,20 @@ a {
 .project-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 10px;
   margin-top: 8px;
 }
 
 .project-box-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-align: center;
   border-radius: 8px;
   padding: 8px 10px;
+  min-height: 40px;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.6px;

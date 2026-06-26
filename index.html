@@ -1,37 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio of a game developer and programmer."
-    />
-    <title>Jared Akigbesote | Game Developer Portfolio</title>
-    <link rel="stylesheet" href="Assets/Css/style.css" />
-    <script src="Assets/Js/pixel-bg.js" defer></script>
-    <script src="Assets/Js/game-ui.js" defer></script>
-  </head>
-  <body>
-    <div class="xp-hud" aria-hidden="true">
-      <span class="xp-label">XP</span>
-      <div class="xp-track">
-        <div class="xp-fill" id="xp-fill"></div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of a game developer and programmer." />
+  <title>Jared Akigbesote | Game Developer Portfolio</title>
+  <link rel="stylesheet" href="Assets/Css/style.css" />
+  <script src="Assets/Js/pixel-bg.js" defer></script>
+  <script src="Assets/Js/game-ui.js" defer></script>
+</head>
+
+<body>
+  <div class="xp-hud" aria-hidden="true">
+    <span class="xp-label">XP</span>
+    <div class="xp-track">
+      <div class="xp-fill" id="xp-fill"></div>
     </div>
-    <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite"></div>
-    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand-block">
-          <h1>Jared Akigbesote</h1>
-          <p id="subtitle">Game Developer & Programmer</p>
-        </div>
-        <div class="hud-stats" aria-label="Status panel">
-          <div class="hud-stat-chip">
-            <span class="hud-dot"></span>
-            <span>Build 1.0</span>
+  </div>
+  <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-block">
+        <h1>Jared Akigbesote</h1>
+        <p id="subtitle">Game Developer & Programmer</p>
+      </div>
+      <div class="hud-stats" aria-label="Status panel">
+        <div class="hud-stat-chip">
+          <span class="hud-dot"></span>
+          <span>Build 1.0</span>
         </div>
         <nav aria-label="Primary navigation">
           <ul id="navbar">
@@ -41,399 +40,321 @@
           </ul>
         </nav>
       </div>
-    </header>
-    <!-- Main -->
-    <main>
-      <section id="welcome" class="hero-section">
-        <div class="hero-backdrop" aria-hidden="true">
-          <canvas id="hero-pixel-canvas"></canvas>
-        </div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Unity | C# | Gameplay Systems</p>
-            <h2 id="welcome-heading">Building Playful Worlds Through Code</h2>
-            <p class="hero-description">
-              I create game prototypes and polished experiences that focus on
-              satisfying gameplay systems, clean architecture, and meaningful player
-              feedback.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#projects"
-                >View Projects</a
-              >
-              <a class="button button-secondary" href="#contact"
-                >Get In Touch</a
-              >
-              <a
-                class="button button-cv"
-                href="Assets/CV/Jared-Akigbesote-CV.pdf"
-                download
-                >Download CV</a
-              >
-            </div>
+  </header>
+  <!-- Main -->
+  <main>
+    <section id="welcome" class="hero-section">
+      <div class="hero-backdrop" aria-hidden="true">
+        <canvas id="hero-pixel-canvas"></canvas>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Unity | C# | Gameplay Systems</p>
+          <h2 id="welcome-heading">Building Playful Worlds Through Code</h2>
+          <p class="hero-description">
+            I create game prototypes and polished experiences that focus on
+            satisfying gameplay systems, clean architecture, and meaningful player
+            feedback.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-secondary" href="#contact">Get In Touch</a>
+            <a class="button button-cv" href="Assets/CV/Jared-Akigbesote-CV.pdf" download>Download CV</a>
           </div>
+        </div>
 
-          <article class="featured-project-box" aria-label="Featured project">
-            <div class="featured-project-image">
-              <iframe
-                src="https://www.youtube.com/embed/cj3sl-19QPA"
-                title="Realm Of Ardga gameplay trailer"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                referrerpolicy="strict-origin-when-cross-origin"
-                loading="lazy"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <p class="video-fallback">
-              If the video does not load,
-              <a
-                href="https://www.youtube.com/watch?v=cj3sl-19QPA"
-                target="_blank"
-                rel="noopener noreferrer"
-                >watch it on YouTube</a
-              >.
+        <article class="featured-project-box" aria-label="Featured project">
+          <div class="featured-project-image">
+            <iframe src="https://www.youtube.com/embed/cj3sl-19QPA" title="Realm Of Ardga gameplay trailer"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <p class="video-fallback">
+            If the video does not load,
+            <a href="https://www.youtube.com/watch?v=cj3sl-19QPA" target="_blank" rel="noopener noreferrer">watch it on
+              YouTube</a>.
+          </p>
+          <div class="featured-project-tag">Featured Project</div>
+          <h3>Realm Of Ardga</h3>
+          <p>Realm Of Ardga is a top-down action RPG set in a fantasy world.</p>
+          <a href="#projects" class="project-link">View Project Details -></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about" class="content-section">
+      <div class="container about-grid">
+        <h2>About Me</h2>
+        <div class="profile-text-container">
+          <div id="profile-text">
+            <p>
+              I am a game developer and programmer who enjoys building
+              interactive experiences that people genuinely connect with.
             </p>
-            <div class="featured-project-tag">Featured Project</div>
+            <p>
+              My interest in games began when I was young. After I was gifted a
+              PlayStation 1, I spent countless hours exploring digital worlds.
+              One of my favorite PS1 games was 3DO Army Men. Later, I got a
+              PlayStation 2 and discovered an even bigger library of titles,
+              including Metal Gear Solid, Ace Combat 4, Call of Duty: World at
+              War, Battlefield 2, Company of Heroes, Gran Turismo 3, and one of
+              my personal favorites, Secret Weapons Over Normandy.
+            </p>
+            <p>
+              I also played games on my laptop, and one game I played all the
+              time was Goodgame Empire. That was my first experience with
+              management and strategy gameplay. My brother had an Xbox 360, and
+              I used to watch him play The Elder Scrolls V: Skyrim. When I
+              finally played it myself, I quickly became obsessed with its world
+              and the freedom it gave players to explore.
+            </p>
+            <p>
+              Another very important game for me was Disney Infinity, especially
+              Toy Box mode. I spent hours building mini-games with its logic
+              tools, and that is where my interest in creating games really
+              started to grow. Games are more than entertainment to me. They are
+              art, a way to connect with people, a way to tell stories, and a
+              way to discover new things about ourselves.
+            </p>
+            <p>
+              My goal is to create games that inspire joy and stay with players
+              for years, just like the games from my childhood stayed with me.
+              In 2024, I started a coding course to build my programming
+              foundations. After finishing it, I downloaded Unity and began
+              learning game development and C#. Since then, I have been building
+              projects independently, improving every day, and enjoying the
+              journey.
+            </p>
+          </div>
+          <div id="profile-text-secondary">
+            <p>
+              This portfolio showcases projects I have worked on, including
+              games and software applications.
+            </p>
+            <p>
+              In each project, I focus on a specific gameplay mechanic or
+              software challenge to push myself and learn new skills. I hope you
+              enjoy exploring my work.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="content-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <h3>Games</h3>
+        <div class="project-grid">
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/Marsh's-run.png" alt="Project screenshot placeholder" />
+            </div>
+            <h3>Marsh's Run</h3>
+            <h4>2025</h4>
+            <h5>Solo Developer</h5>
+            <p>
+              Fast-paced 2d Platformer focused on player movement and agility.
+              My aim was to create a game that resembled the movement and feel of classic platformers like Sonic the
+              Hedgehog and Super Mario Bros.
+            </p>
+            <p>The main gameplay mechanics I focused on were wall jumping and wall sliding.</p>
+            <p>I also added a timer and death time penalty to give the player a sense of urgency and challenge.</p>
+            <p>The game also features a checkpoint and respawn system to allow the player to quickly retry after dying.
+            </p>
+            <p>This was my first game I made in Unity, and it was a great point to start my journey as a game developer.
+            </p>
+            <p>I learned a lot about Unity, C#, and game development while making this game.</p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>Unity</li>
+              <li>C#</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jareda034/MarshsRunScripts"
+                target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+              <a class="project-box-button itch-button" href="https://ping-wing.itch.io/marshs-run" target="_blank"
+                rel="noopener noreferrer">Itch.io Page</a>
+            </div>
+          </article>
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/featured-project.png" alt="Project screenshot placeholder" />
+            </div>
             <h3>Realm Of Ardga</h3>
-            <p>Realm Of Ardga is a top-down action RPG set in a fantasy world.</p>
-            <a href="#projects" class="project-link">View Project Details -></a>
+            <h4>2026</h4>
+            <h5>Solo Developer</h5>
+            <p>
+              A 2D top-down RPG focused on enemy AI, player progression, and level design. The goal of the project was
+              to create a fun and challenging experience with a strong focus on progression and skill-based gameplay.
+            </p>
+            <p>
+              The game features a variety of enemies with different attack patterns, alongside a leveling system that
+              allows the player to improve their stats and unlock new abilities over time.
+            </p>
+            <p>
+              It includes two distinct levels, each with its own environment design and ambient music. The first level
+              takes place in a grassland area featuring ruins, while the second is set in a magical forest environment.
+            </p>
+            <p>
+              It includes two distinct levels, each with its own environment design and ambient music. The first level
+              takes place in a grassland area featuring ruins, while the second is set in a magical forest environment.
+            </p>
+            <p>
+              Combat is built around a stamina system, where the player can only attack when they have sufficient
+              stamina. The game also includes audio feedback for actions such as attacking, moving, taking damage,
+              dying, and leveling up.
+            </p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>Unity</li>
+              <li>C#</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jareda034/Scripts" target="_blank"
+                rel="noopener noreferrer">GitHub Repo</a>
+              <a class="project-box-button itch-button" href="https://ping-wing.itch.io/realm-of-ard" target="_blank"
+                rel="noopener noreferrer">Itch.io Page</a>
+            </div>
+          </article>
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/Cyber-Threat.png" alt="Project screenshot placeholder" />
+            </div>
+            <h3>Cyber Threat</h3>
+            <h4>2026</h4>
+            <p>
+              A 3D top-down shooter focused on combat and strategy, with 3
+              state enemy AI.
+            </p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>Unity</li>
+              <li>C#</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jareda034/Bounty" target="_blank"
+                rel="noopener noreferrer">GitHub Repo</a>
+              <a class="project-box-button itch-button" href="https://ping-wing.itch.io/cyber-threat" target="_blank"
+                rel="noopener noreferrer">Itch.io Page</a>
+            </div>
+          </article>
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/battleship.png" alt="Project screenshot placeholder" />
+            </div>
+            <h3>BattleShips</h3>
+            <h4>2025</h4>
+            <p>
+              A terminal-based Battleship game that allows player to play against the computer.
+            </p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>HTML</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Procfile</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jaredakigbesote/battleship"
+                target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            </div>
           </article>
         </div>
-      </section>
 
-      <!-- About Section -->
+        <br />
 
-      <section id="about" class="content-section">
-        <div class="container about-grid">
-          <h2>About Me</h2>
-          <div class="profile-text-container">
-            <div id="profile-text">
-              <p>
-                I am a game developer and programmer who enjoys building
-                interactive experiences that people genuinely connect with.
-              </p>
-              <p>
-                My interest in games began when I was young. After I was gifted a
-                PlayStation 1, I spent countless hours exploring digital worlds.
-                One of my favorite PS1 games was 3DO Army Men. Later, I got a
-                PlayStation 2 and discovered an even bigger library of titles,
-                including Metal Gear Solid, Ace Combat 4, Call of Duty: World at
-                War, Battlefield 2, Company of Heroes, Gran Turismo 3, and one of
-                my personal favorites, Secret Weapons Over Normandy.
-              </p>
-              <p>
-                I also played games on my laptop, and one game I played all the
-                time was Goodgame Empire. That was my first experience with
-                management and strategy gameplay. My brother had an Xbox 360, and
-                I used to watch him play The Elder Scrolls V: Skyrim. When I
-                finally played it myself, I quickly became obsessed with its world
-                and the freedom it gave players to explore.
-              </p>
-              <p>
-                Another very important game for me was Disney Infinity, especially
-                Toy Box mode. I spent hours building mini-games with its logic
-                tools, and that is where my interest in creating games really
-                started to grow. Games are more than entertainment to me. They are
-                art, a way to connect with people, a way to tell stories, and a
-                way to discover new things about ourselves.
-              </p>
-              <p>
-                My goal is to create games that inspire joy and stay with players
-                for years, just like the games from my childhood stayed with me.
-                In 2024, I started a coding course to build my programming
-                foundations. After finishing it, I downloaded Unity and began
-                learning game development and C#. Since then, I have been building
-                projects independently, improving every day, and enjoying the
-                journey.
-              </p>
+        <h3>Software</h3>
+        <div class="project-grid">
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/NCmain.png" alt="Project screenshot placeholder" />
             </div>
-            <div id="profile-text-secondary">
-              <p>
-                This portfolio showcases projects I have worked on, including
-                games and software applications.
-              </p>
-              <p>
-                In each project, I focus on a specific gameplay mechanic or
-                software challenge to push myself and learn new skills. I hope you
-                enjoy exploring my work.
-              </p>
+            <h3>NC Cinema</h3>
+            <h4>2025</h4>
+            <p>A Full-Stack Cinema management application.</p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>Django</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Docker</li>
+              <li>Procfile</li>
+              <li>Cloudinary</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jaredakigbesote/cinema-p4"
+                target="_blank" rel="noopener noreferrer">GitHub Repo</a>
             </div>
-          </div>
+          </article>
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/EldenGuides.png" alt="Project screenshot placeholder" />
+            </div>
+            <h3>Elden Guides</h3>
+            <h4>2024</h4>
+            <p>Front-end application for Elden Ring.</p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jaredakigbesote/Eguides-project"
+                target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            </div>
+          </article>
+          <article class="project-tile">
+            <div class="project-tile-image">
+              <img src="Assets/Images/Quizmain.png" alt="Project screenshot placeholder" />
+            </div>
+            <h3>General Knowledge Quiz</h3>
+            <h4>2025</h4>
+            <p>A Face paced Quiz application.</p>
+            <h4 class="project-tech-heading">Technologies Used</h4>
+            <ul class="project-tech-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-box-button github-button" href="https://github.com/jaredakigbesote/quiz" target="_blank"
+                rel="noopener noreferrer">GitHub Repo</a>
+            </div>
+          </article>
         </div>
-      </section>
-      <!-- Projects Section -->
-      <section id="projects" class="content-section">
-        <div class="container">
-          <h2>Projects</h2>
-          <h3>Games</h3>
-          <div class="project-grid">
-            <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/Marsh's-run.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>Marsh's Run</h3>
-              <h4>2025</h4>
-              <p>
-                Fast-paced 2d Platformer focused on player movement and agility.
-              </p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>Unity</li>
-                <li>C#</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jareda034/MarshsRunScripts"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-                <a
-                  class="project-box-button itch-button"
-                  href="https://ping-wing.itch.io/marshs-run"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Itch.io Page</a
-                >
-              </div>
-            </article>
-            <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/featured-project.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>Realm Of Ardga</h3>
-              <h4>2026</h4>
-              <p>
-                A 2D top-down RPG focused on enemy AI, player progression, and
-                level design.
-              </p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>Unity</li>
-                <li>C#</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jareda034/Scripts"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-                <a
-                  class="project-box-button itch-button"
-                  href="https://ping-wing.itch.io/realm-of-ard"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Itch.io Page</a
-                >
-              </div>
-            </article>
-            <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/Cyber-Threat.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>Cyber Threat</h3>
-              <h4>2026</h4>
-              <p>
-                A 3D top-down shooter focused on combat and strategy, with 3
-                state enemy AI.
-              </p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>Unity</li>
-                <li>C#</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jareda034/Bounty"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-                <a
-                  class="project-box-button itch-button"
-                  href="https://ping-wing.itch.io/cyber-threat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Itch.io Page</a
-                >
-              </div>
-            </article>
-             <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/battleship.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>BattleShips</h3>
-              <h4>2025</h4>
-              <p>
-                A terminal-based Battleship game that allows player to play against the computer.
-              </p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>HTML</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>Procfile</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jaredakigbesote/battleship"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-              </div>
-            </article>
-          </div>
-
-          <br />
-
-          <h3>Software</h3>
-          <div class="project-grid">
-            <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/NCmain.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>NC Cinema</h3>
-              <h4>2025</h4>
-              <p>A Full-Stack Cinema management application.</p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>Django</li>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Docker</li>
-                <li>Procfile</li>
-                <li>Cloudinary</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jaredakigbesote/cinema-p4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-              </div>
-            </article>
-            <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/EldenGuides.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>Elden Guides</h3>
-              <h4>2024</h4>
-              <p>Front-end application for Elden Ring.</p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jaredakigbesote/Eguides-project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-              </div>
-            </article>
-            <article class="project-tile">
-              <div class="project-tile-image">
-                <img
-                  src="Assets/Images/Quizmain.png"
-                  alt="Project screenshot placeholder"
-                />
-              </div>
-              <h3>General Knowledge Quiz</h3>
-              <h4>2025</h4>
-              <p>A Face paced Quiz application.</p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-              <ul class="project-tech-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-              </ul>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jaredakigbesote/quiz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- Contact Section -->
-    <footer id="contact">
-      <div class="container">
-        <h2 id="contact-heading">Contact Information</h2>
-        <nav aria-label="Contact links">
-          <ul id="contact-bar">
-            <li class="nav-item">
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Portfolio%20Inquiry"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Email</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://github.com/jareda034"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://ping-wing.itch.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Itch.io</a
-              >
-            </li>
-          </ul>
-        </nav>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <!-- Contact Section -->
+  <footer id="contact">
+    <div class="container">
+      <h2 id="contact-heading">Contact Information</h2>
+      <nav aria-label="Contact links">
+        <ul id="contact-bar">
+          <li class="nav-item">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Portfolio%20Inquiry"
+              target="_blank" rel="noopener noreferrer">Email</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/jareda034" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://ping-wing.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+
 </html>
