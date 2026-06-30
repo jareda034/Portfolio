@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Realm Of Ardga project page layout and development breakdown."
+      content="Battleship project page layout and development breakdown."
     />
-    <title>Realm Of Ardga | Jared Akigbesote</title>
+    <title>Battleship | Jared Akigbesote</title>
     <link rel="stylesheet" href="Assets/Css/style.css" />
     <script src="Assets/Js/pixel-bg.js" defer></script>
     <script src="Assets/Js/game-ui.js" defer></script>
@@ -32,14 +32,9 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand-block">
-          <h1>Realm Of Ardga</h1>
-          <p id="subtitle">Project Breakdown | Top-Down Action RPG</p>
+          <h1>Battleship</h1>
+          <p id="subtitle">Project Breakdown | Classic Strategy Game</p>
         </div>
-        <div class="hud-stats" aria-label="Project status">
-          <div class="hud-stat-chip">
-            <span class="hud-dot"></span>
-            <span>Playable Build</span>
-          </div>
           <div class="hud-stat-chip">
             <span class="hud-dot hud-dot-warn"></span>
             <span>Solo Project</span>
@@ -63,26 +58,19 @@
         </div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Unity | C# | Combat Systems</p>
-            <h2 id="welcome-heading">Explore, Fight, and Grow Stronger</h2>
+            <p class="eyebrow">Python | Terminal | Strategy Systems</p>
+            <h2 id="welcome-heading">Plan, Attack, and Dominate</h2>
             <p class="hero-description">
-              Realm Of Ardga is a 2D fantasy RPG built in Unity where players
-              battle mystical creatures, gain experience, unlock powerful
-              skills, and explore a handcrafted world. The project focuses on
-              AI-driven combat, RPG progression systems, and persistent player
-              data across multiple scenes.
+              Battleships is a Python terminal strategy game where players place
+              their fleet, battle against a computer opponent, and use tactical
+              guessing to sink every enemy ship. The project focuses on
+              object-oriented programming, game logic, user input validation,
+              and board management.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#overview">View Details</a>
               <a class="button button-secondary" href="index.html#projects"
                 >Back To Portfolio</a
-              >
-              <a
-                class="button button-cv"
-                href="https://ping-wing.itch.io/realm-of-ard"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Play On Itch.io</a
               >
             </div>
           </div>
@@ -93,15 +81,15 @@
           >
             <div class="featured-project-image">
               <img
-                src="Assets/Images/featured-project.png"
-                alt="Realm Of Ardga gameplay screenshot"
+                src="Assets/Images/Battleship.png"
+                alt="Battleship gameplay screenshot"
               />
             </div>
             <div class="featured-project-tag">Quick Facts</div>
-            <h3>Realm Of Ardga</h3>
-            <p>Genre: Top-Down Action RPG</p>
+            <h3>Battleship</h3>
+            <p>Genre: Classic Strategy Game</p>
             <p>Role: Solo Developer</p>
-            <p>Engine: Unity</p>
+            <p>Language: Python</p>
             <a
               href="https://github.com/jareda034/Scripts"
               class="project-link"
@@ -119,41 +107,38 @@
           <div class="profile-text-container">
             <div id="profile-text">
               <p>
-                <strong>Game Summary:</strong> Realm Of Ardga is a 2D top-down
-                fantasy RPG built in Unity featuring real-time combat, enemy AI,
-                RPG progression, loot collection, and skill-based character
-                development. Players explore a fantasy world while fighting
-                enemies, collecting treasure, and unlocking increasingly
-                powerful abilities.
+                <strong>Game Summary:</strong> Battleships is a Python terminal
+                game where players strategically place ships before taking turns
+                attempting to sink the opponent's fleet. The game features
+                randomized computer ship placement, player-controlled ship
+                placement, turn-based gameplay, and win/loss conditions.
               </p>
               <p>
-                <strong>Core Goal:</strong> The project was designed to combine
-                responsive combat with rewarding RPG progression systems.
-                Players become stronger by defeating enemies, earning
-                experience, unlocking skills, and improving their character
-                throughout their adventure.
+                <strong>Core Goal:</strong> The project was designed to recreate
+                the classic Battleships board game while strengthening my
+                understanding of object-oriented programming, game state
+                management, user input validation, and algorithmic thinking.
               </p>
               <p>
-                <strong>Development Context:</strong> Realm Of Ardga was
-                developed as a solo Unity project to improve my understanding of
-                AI programming, persistent player data, RPG systems, combat
-                mechanics, and gameplay architecture while creating a complete
-                gameplay experience.
+                <strong>Development Context:</strong> Battleships was developed
+                as a solo Python project and deployed on Heroku. The project
+                focused on building complete gameplay systems using Python while
+                following clean coding practices and modular design.
               </p>
             </div>
             <div id="profile-text-secondary">
               <p>
-                <strong>What I Learned:</strong> Throughout development I
-                gained practical experience building enemy AI, combat systems,
-                experience and leveling mechanics, skill trees, persistent
-                player progression, animation events, sprite sorting, gameplay
-                architecture, and debugging interconnected gameplay systems.
+                <strong>What I Learned:</strong> Throughout development I gained
+                experience working with object-oriented programming, board
+                management, player input validation, game loops, collision
+                detection for ship placement, debugging, and Python best
+                practices.
               </p>
               <p>
-                <strong>Biggest Challenge:</strong> One of the largest
-                challenges was implementing persistent player progression across
-                multiple scenes while ensuring player level, unlocked skills,
-                and collected coins remained synchronized throughout the game.
+                <strong>Biggest Challenge:</strong> One of the biggest
+                challenges was creating a ship placement system that correctly
+                handled overlapping ships, board boundaries, and both horizontal
+                and vertical placement while preventing invalid user input.
               </p>
             </div>
           </div>
@@ -165,62 +150,59 @@
           <h2>Gameplay Features</h2>
           <div class="project-grid">
             <article class="project-tile">
-              <h3>Combat and Enemy AI</h3>
+              <h3>Ship Placement and Board Management</h3>
               <p>
-                Combat is driven by state-based enemy AI that allows enemies to
-                detect the player, chase them, and attack once within range.
-                Each enemy has unique attack ranges, attack speeds, and
-                behaviours to create varied combat encounters. Player also must
-                manage stamina to avoid overextending attacks and leaving
-                themselves vulnerable to enemy counterattacks.
+                Players strategically position ships of varying sizes before the
+                match begins. Ships can be placed horizontally or vertically
+                while the game validates every placement to prevent overlapping
+                ships or positions outside the board.
               </p>
               <h4 class="project-tech-heading">Implemented Features</h4>
               <ul class="project-tech-list">
-                <li>Stamina-gated melee attacks.</li>
-                <li>Enemy detection system.</li>
-                <li>State-based AI (Idle, Chase, Attack).</li>
-                <li>Unique enemy attack ranges.</li>
-                <li>Health and damage system.</li>
-                <li>Player combat mechanics.</li>
-                <li>Loot drops from defeated enemies.</li>
+                <li>Player ship placement.</li>
+                <li>Random computer ship placement.</li>
+                <li>Horizontal and vertical placement.</li>
+                <li>Multiple ship sizes.</li>
+                <li>Placement validation.</li>
+                <li>Overlap detection.</li>
               </ul>
             </article>
 
             <article class="project-tile">
-              <h3>World Systems</h3>
+              <h3>Turn-Based Combat</h3>
               <p>
-                The world combines exploration with RPG mechanics through shops,
-                loot collection, enemy encounters, and intuitive UI systems.
-                Sprite sorting and layered environments create believable depth
-                throughout the game world.
-              </p>
-              <h4 class="project-tech-heading">Design Highlights</h4>
-              <ul class="project-tech-list">
-                <li>Shop system.</li>
-                <li>Loot collection.</li>
-                <li>HUD and gameplay UI.</li>
-                <li>Player health display.</li>
-                <li>Scene transitions.</li>
-                <li>2D sprite sorting and layering.</li>
-              </ul>
-            </article>
-
-            <article class="project-tile">
-              <h3>Player Progression</h3>
-              <p>
-                Players earn experience by defeating enemies and leveling up to
-                unlock new abilities. A three-branch skill tree allows players
-                to specialise in different combat styles while persistent player
-                progression carries progress across scenes.
+                Players and the computer take turns attempting to locate and
+                destroy each other's fleet. Hits and misses are tracked
+                throughout the game until one player's ships have all been
+                destroyed.
               </p>
               <h4 class="project-tech-heading">Gameplay Systems</h4>
               <ul class="project-tech-list">
-                <li>Experience and leveling system.</li>
-                <li>Three-branch skill tree.</li>
-                <li>Persistent player progression.</li>
-                <li>Character stat progression.</li>
-                <li>Unlockable combat abilities.</li>
-                <li>Progressive gameplay difficulty.</li>
+                <li>Alternating player turns.</li>
+                <li>Hit detection.</li>
+                <li>Miss detection.</li>
+                <li>Board state updates.</li>
+                <li>Win condition checking.</li>
+                <li>Game over system.</li>
+              </ul>
+            </article>
+
+            <article class="project-tile">
+              <h3>Game And Logic Validation</h3>
+              <p>
+                The game uses object-oriented programming to manage multiple
+                boards simultaneously. Extensive input validation ensures
+                players cannot place ships illegally or enter invalid
+                coordinates during gameplay.
+              </p>
+              <h4 class="project-tech-heading">Gameplay Systems</h4>
+              <ul class="project-tech-list">
+                <li>Board class architecture.</li>
+                <li>Multiple board management.</li>
+                <li>User input validation.</li>
+                <li>Coordinate checking.</li>
+                <li>Boundary validation.</li>
+                <li>Game state management.</li>
               </ul>
             </article>
           </div>
@@ -234,16 +216,15 @@
             <article class="project-tile">
               <h3>Completed</h3>
               <ul class="project-tech-list">
-                <li>Enemy AI detection and chase system.</li>
-                <li>Combat system.</li>
-                <li>Health and damage system.</li>
-                <li>Experience and leveling.</li>
-                <li>Three-branch skill tree.</li>
-                <li>Persistent player progression.</li>
-                <li>Loot system.</li>
-                <li>Shop system.</li>
-                <li>HUD and gameplay UI.</li>
-                <li>Controller support.</li>
+                <li>Player ship placement.</li>
+                <li>Computer ship placement.</li>
+                <li>Multiple ship sizes.</li>
+                <li>Horizontal and vertical placement.</li>
+                <li>Turn-based gameplay.</li>
+                <li>Hit and miss detection.</li>
+                <li>Board validation.</li>
+                <li>Win/loss conditions.</li>
+                <li>Heroku deployment.</li>
               </ul>
             </article>
 
@@ -251,7 +232,9 @@
               <h3>In Progress</h3>
               <ul class="project-tech-list">
                 <li>No active development.</li>
-                <li>Project completed as an RPG systems portfolio piece.</li>
+                <li>
+                  Project completed as a Python programming portfolio piece.
+                </li>
                 <li>Future improvements listed separately.</li>
               </ul>
             </article>
@@ -259,16 +242,13 @@
             <article class="project-tile">
               <h3>Future Ideas</h3>
               <ul class="project-tech-list">
-                <li>Save and load system.</li>
-                <li>Boss encounters.</li>
-                <li>Additional enemy archetypes.</li>
-                <li>Expanded skill trees.</li>
-                <li>Inventory system.</li>
-                <li>Unique equipment and items.</li>
-                <li>Improved combat mechanics.</li>
-                <li>Settings menu.</li>
-                <li>Ambient environmental audio.</li>
-                <li>Improved animations and visual effects.</li>
+                <li>Custom board sizes.</li>
+                <li>Player usernames.</li>
+                <li>Custom fleet sizes.</li>
+                <li>Difficulty selection.</li>
+                <li>Improved AI opponent.</li>
+                <li>Score tracking.</li>
+                <li>Graphical user interface.</li>
               </ul>
             </article>
           </div>
@@ -314,22 +294,22 @@
             <article class="project-tile">
               <h3>Technical Notes</h3>
               <p>
-                Realm Of Ardga was built in Unity using C# and follows an
-                object-oriented, modular architecture. Enemy behaviours are
-                implemented using state-based AI, while gameplay systems
-                communicate through event-driven logic. Persistent player data
-                allows progression to carry seamlessly across multiple scenes.
+                Battleships was built using Python following an object-oriented
+                architecture centred around a reusable Board class. Multiple
+                board instances manage both player and computer game states,
+                while validation systems ensure legal ship placement and
+                accurate gameplay throughout each match.
               </p>
               <h4 class="project-tech-heading">Technologies Used</h4>
               <ul class="project-tech-list">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Visual Studio</li>
+                <li>Python</li>
                 <li>Git & GitHub</li>
+                <li>Visual Studio Code</li>
                 <li>Object-Oriented Programming</li>
-                <li>State-Based AI</li>
-                <li>Event-Driven Programming</li>
-                <li>Persistent Data Management</li>
+                <li>Game State Management</li>
+                <li>Input Validation</li>
+                <li>Algorithm Design</li>
+                <li>Heroku Deployment</li>
               </ul>
             </article>
           </div>
