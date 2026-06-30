@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Realm Of Ardga project page layout and development breakdown."
+    />
+    <title>Realm Of Ardga | Jared Akigbesote</title>
+    <link rel="stylesheet" href="Assets/Css/style.css" />
+    <script src="Assets/Js/pixel-bg.js" defer></script>
+    <script src="Assets/Js/game-ui.js" defer></script>
+  </head>
+
+  <body>
+    <div class="xp-hud" aria-hidden="true">
+      <span class="xp-label">XP</span>
+      <div class="xp-track">
+        <div class="xp-fill" id="xp-fill"></div>
+      </div>
+    </div>
+    <div
+      class="achievement-toast"
+      id="achievement-toast"
+      role="status"
+      aria-live="polite"
+    ></div>
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand-block">
+          <h1>Realm Of Ardga</h1>
+          <p id="subtitle">Project Breakdown | Top-Down Action RPG</p>
+        </div>
+        <div class="hud-stats" aria-label="Project status">
+          <div class="hud-stat-chip">
+            <span class="hud-dot"></span>
+            <span>Playable Build</span>
+          </div>
+          <div class="hud-stat-chip">
+            <span class="hud-dot hud-dot-warn"></span>
+            <span>Solo Project</span>
+          </div>
+          <nav aria-label="Project navigation">
+            <ul id="navbar">
+              <li class="nav-item"><a href="#overview">Overview</a></li>
+              <li class="nav-item"><a href="#features">Features</a></li>
+              <li class="nav-item"><a href="#roadmap">Roadmap</a></li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-backdrop" aria-hidden="true">
+          <canvas id="hero-pixel-canvas"></canvas>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Unity | C# | Combat Systems</p>
+            <h2 id="welcome-heading">Explore, Fight, and Grow Stronger</h2>
+            <p class="hero-description">
+              Realm Of Ardga is a 2D fantasy RPG built in Unity where players
+              battle mystical creatures, gain experience, unlock powerful
+              skills, and explore a handcrafted world. The project focuses on
+              AI-driven combat, RPG progression systems, and persistent player
+              data across multiple scenes.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#overview">View Details</a>
+              <a class="button button-secondary" href="index.html#projects"
+                >Back To Portfolio</a
+              >
+              <a
+                class="button button-cv"
+                href="https://ping-wing.itch.io/realm-of-ard"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Play On Itch.io</a
+              >
+            </div>
+          </div>
+
+          <article
+            class="featured-project-box"
+            aria-label="Project quick facts"
+          >
+            <div class="featured-project-image">
+              <img
+                src="Assets/Images/featured-project.png"
+                alt="Realm Of Ardga gameplay screenshot"
+              />
+            </div>
+            <div class="featured-project-tag">Quick Facts</div>
+            <h3>Realm Of Ardga</h3>
+            <p>Genre: Top-Down Action RPG</p>
+            <p>Role: Solo Developer</p>
+            <p>Engine: Unity</p>
+            <a
+              href="https://github.com/jareda034/Scripts"
+              class="project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View Scripts -></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="overview" class="content-section">
+        <div class="container about-grid">
+          <h2>Project Overview</h2>
+          <div class="profile-text-container">
+            <div id="profile-text">
+              <p>
+                <strong>Game Summary:</strong> Realm Of Ardga is a 2D top-down
+                fantasy RPG built in Unity featuring real-time combat, enemy AI,
+                RPG progression, loot collection, and skill-based character
+                development. Players explore a fantasy world while fighting
+                enemies, collecting treasure, and unlocking increasingly
+                powerful abilities.
+              </p>
+              <p>
+                <strong>Core Goal:</strong> The project was designed to combine
+                responsive combat with rewarding RPG progression systems.
+                Players become stronger by defeating enemies, earning
+                experience, unlocking skills, and improving their character
+                throughout their adventure.
+              </p>
+              <p>
+                <strong>Development Context:</strong> Realm Of Ardga was
+                developed as a solo Unity project to improve my understanding of
+                AI programming, persistent player data, RPG systems, combat
+                mechanics, and gameplay architecture while creating a complete
+                gameplay experience.
+              </p>
+            </div>
+            <div id="profile-text-secondary">
+              <p>
+                <strong>What I Learned:</strong> Throughout development I
+                gained practical experience building enemy AI, combat systems,
+                experience and leveling mechanics, skill trees, persistent
+                player progression, animation events, sprite sorting, gameplay
+                architecture, and debugging interconnected gameplay systems.
+              </p>
+              <p>
+                <strong>Biggest Challenge:</strong> One of the largest
+                challenges was implementing persistent player progression across
+                multiple scenes while ensuring player level, unlocked skills,
+                and collected coins remained synchronized throughout the game.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="content-section">
+        <div class="container">
+          <h2>Gameplay Features</h2>
+          <div class="project-grid">
+            <article class="project-tile">
+              <h3>Combat and Enemy AI</h3>
+              <p>
+                Combat is driven by state-based enemy AI that allows enemies to
+                detect the player, chase them, and attack once within range.
+                Each enemy has unique attack ranges, attack speeds, and
+                behaviours to create varied combat encounters. Player also must
+                manage stamina to avoid overextending attacks and leaving
+                themselves vulnerable to enemy counterattacks.
+              </p>
+              <h4 class="project-tech-heading">Implemented Features</h4>
+              <ul class="project-tech-list">
+                <li>Stamina-gated melee attacks.</li>
+                <li>Enemy detection system.</li>
+                <li>State-based AI (Idle, Chase, Attack).</li>
+                <li>Unique enemy attack ranges.</li>
+                <li>Health and damage system.</li>
+                <li>Player combat mechanics.</li>
+                <li>Loot drops from defeated enemies.</li>
+              </ul>
+            </article>
+
+            <article class="project-tile">
+              <h3>World Systems</h3>
+              <p>
+                The world combines exploration with RPG mechanics through shops,
+                loot collection, enemy encounters, and intuitive UI systems.
+                Sprite sorting and layered environments create believable depth
+                throughout the game world.
+              </p>
+              <h4 class="project-tech-heading">Design Highlights</h4>
+              <ul class="project-tech-list">
+                <li>Shop system.</li>
+                <li>Loot collection.</li>
+                <li>HUD and gameplay UI.</li>
+                <li>Player health display.</li>
+                <li>Scene transitions.</li>
+                <li>2D sprite sorting and layering.</li>
+              </ul>
+            </article>
+
+            <article class="project-tile">
+              <h3>Player Progression</h3>
+              <p>
+                Players earn experience by defeating enemies and leveling up to
+                unlock new abilities. A three-branch skill tree allows players
+                to specialise in different combat styles while persistent player
+                progression carries progress across scenes.
+              </p>
+              <h4 class="project-tech-heading">Gameplay Systems</h4>
+              <ul class="project-tech-list">
+                <li>Experience and leveling system.</li>
+                <li>Three-branch skill tree.</li>
+                <li>Persistent player progression.</li>
+                <li>Character stat progression.</li>
+                <li>Unlockable combat abilities.</li>
+                <li>Progressive gameplay difficulty.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="content-section">
+        <div class="container">
+          <h2>Roadmap and Iteration</h2>
+          <div class="project-grid">
+            <article class="project-tile">
+              <h3>Completed</h3>
+              <ul class="project-tech-list">
+                <li>Enemy AI detection and chase system.</li>
+                <li>Combat system.</li>
+                <li>Health and damage system.</li>
+                <li>Experience and leveling.</li>
+                <li>Three-branch skill tree.</li>
+                <li>Persistent player progression.</li>
+                <li>Loot system.</li>
+                <li>Shop system.</li>
+                <li>HUD and gameplay UI.</li>
+                <li>Controller support.</li>
+              </ul>
+            </article>
+
+            <article class="project-tile">
+              <h3>In Progress</h3>
+              <ul class="project-tech-list">
+                <li>No active development.</li>
+                <li>Project completed as an RPG systems portfolio piece.</li>
+                <li>Future improvements listed separately.</li>
+              </ul>
+            </article>
+
+            <article class="project-tile">
+              <h3>Future Ideas</h3>
+              <ul class="project-tech-list">
+                <li>Save and load system.</li>
+                <li>Boss encounters.</li>
+                <li>Additional enemy archetypes.</li>
+                <li>Expanded skill trees.</li>
+                <li>Inventory system.</li>
+                <li>Unique equipment and items.</li>
+                <li>Improved combat mechanics.</li>
+                <li>Settings menu.</li>
+                <li>Ambient environmental audio.</li>
+                <li>Improved animations and visual effects.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="content-section">
+        <div class="container">
+          <h2>Media and Links</h2>
+          <div class="project-grid">
+            <article class="project-tile">
+              <h3>Gameplay Video</h3>
+              <p>
+                Watch Realm Of Ardga gameplay clips featuring combat,
+                exploration, progression, and enemy encounter pacing.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-box-button github-button"
+                  href="https://github.com/jareda034/Scripts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub Repo</a
+                >
+                <a
+                  class="project-box-button itch-button"
+                  href="https://ping-wing.itch.io/realm-of-ard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Itch.io Page</a
+                >
+              </div>
+            </article>
+
+            <article class="project-tile">
+              <h3>Screenshots</h3>
+              <p>
+                Showcase screenshots for both levels, enemy encounters, UI
+                progression elements, and visual world details.
+              </p>
+            </article>
+
+            <article class="project-tile">
+              <h3>Technical Notes</h3>
+              <p>
+                Realm Of Ardga was built in Unity using C# and follows an
+                object-oriented, modular architecture. Enemy behaviours are
+                implemented using state-based AI, while gameplay systems
+                communicate through event-driven logic. Persistent player data
+                allows progression to carry seamlessly across multiple scenes.
+              </p>
+              <h4 class="project-tech-heading">Technologies Used</h4>
+              <ul class="project-tech-list">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Visual Studio</li>
+                <li>Git & GitHub</li>
+                <li>Object-Oriented Programming</li>
+                <li>State-Based AI</li>
+                <li>Event-Driven Programming</li>
+                <li>Persistent Data Management</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="container">
+        <h2 id="contact-heading">Project Contact</h2>
+        <nav aria-label="Contact links">
+          <ul id="contact-bar">
+            <li class="nav-item">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Realm%20Of%20Ardga%20Project%20Inquiry"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Email</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://github.com/jareda034"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="https://ping-wing.itch.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Itch.io</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
