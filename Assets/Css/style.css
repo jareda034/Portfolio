@@ -472,6 +472,10 @@ a {
   font-size: 1.45rem;
 }
 
+.project-tile > h3:first-child {
+  margin-top: 14px;
+}
+
 .project-tile p {
   color: var(--muted);
 }
