@@ -580,7 +580,8 @@ footer {
 .xp-hud {
   position: fixed;
   left: 14px;
-  top: 14px;
+  top: auto;
+  bottom: 12px;
   z-index: 140;
   display: flex;
   align-items: center;
@@ -690,10 +691,16 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
   .hero-grid {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .xp-hud {
+    top: auto;
+    bottom: 12px;
+    left: 12px;
   }
 
   .featured-project-box {
@@ -737,11 +744,5 @@ footer {
 
   .project-links {
     grid-template-columns: 1fr;
-  }
-
-  .xp-hud {
-    top: auto;
-    bottom: 12px;
-    left: 12px;
   }
 }
