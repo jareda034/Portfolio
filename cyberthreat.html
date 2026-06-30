@@ -32,8 +32,8 @@
     <header class="site-header">
       <div class="container header-inner">
         <div class="brand-block">
-          <h1>Realm Of Ardga</h1>
-          <p id="subtitle">Project Breakdown | Top-Down Action RPG</p>
+          <h1>Cyber Threat</h1>
+          <p id="subtitle">Project Breakdown | Top-Down Shooter</p>
         </div>
         <div class="hud-stats" aria-label="Project status">
           <div class="hud-stat-chip">
@@ -64,13 +64,12 @@
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="eyebrow">Unity | C# | Combat Systems</p>
-            <h2 id="welcome-heading">Explore, Fight, and Grow Stronger</h2>
+            <h2 id="welcome-heading">Tactical. Futuristic. Relentless.</h2>
             <p class="hero-description">
-              Realm Of Ardga is a 2D fantasy RPG built in Unity where players
-              battle mystical creatures, gain experience, unlock powerful
-              skills, and explore a handcrafted world. The project focuses on
-              AI-driven combat, RPG progression systems, and persistent player
-              data across multiple scenes.
+              Cyber Threat is a 3D top-down shooter built in Unity where players
+              fight through enemy-controlled areas while completing mission
+              objectives. The project focuses on AI-driven combat, tactical
+              gameplay, mission progression, and modular gameplay systems.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#overview">View Details</a>
@@ -79,7 +78,7 @@
               >
               <a
                 class="button button-cv"
-                href="https://ping-wing.itch.io/realm-of-ard"
+                href="https://ping-wing.itch.io/cyber-threat"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Play On Itch.io</a
@@ -93,17 +92,17 @@
           >
             <div class="featured-project-image">
               <img
-                src="Assets/Images/featured-project.png"
-                alt="Realm Of Ardga gameplay screenshot"
+                src="Assets/Images/Cyber-Threat.png"
+                alt="Cyber Threat gameplay screenshot"
               />
             </div>
             <div class="featured-project-tag">Quick Facts</div>
-            <h3>Realm Of Ardga</h3>
-            <p>Genre: Top-Down Action RPG</p>
+            <h3>Cyber Threat</h3>
+            <p>Genre: Top-Down Shooter</p>
             <p>Role: Solo Developer</p>
             <p>Engine: Unity</p>
             <a
-              href="https://github.com/jareda034/Scripts"
+              href="https://github.com/jareda034/Bounty"
               class="project-link"
               target="_blank"
               rel="noopener noreferrer"
@@ -119,41 +118,39 @@
           <div class="profile-text-container">
             <div id="profile-text">
               <p>
-                <strong>Game Summary:</strong> Realm Of Ardga is a 2D top-down
-                fantasy RPG built in Unity featuring real-time combat, enemy AI,
-                RPG progression, loot collection, and skill-based character
-                development. Players explore a fantasy world while fighting
-                enemies, collecting treasure, and unlocking increasingly
-                powerful abilities.
+                <strong>Game Summary:</strong> Cyber Threat is a 3D top-down
+                shooter built in Unity featuring enemy AI, tactical shooting
+                mechanics, mission objectives, and interactive gameplay systems.
+                Players battle hostile enemies while completing objectives and
+                progressing through increasingly dangerous combat scenarios.
               </p>
               <p>
                 <strong>Core Goal:</strong> The project was designed to combine
-                responsive combat with rewarding RPG progression systems.
-                Players become stronger by defeating enemies, earning
-                experience, unlocking skills, and improving their character
-                throughout their adventure.
+                engaging third-person combat with intelligent enemy behaviours
+                and mission-based gameplay. Players must strategically eliminate
+                enemies, manage ammunition, and complete objectives to progress.
               </p>
               <p>
-                <strong>Development Context:</strong> Realm Of Ardga was
-                developed as a solo Unity project to improve my understanding of
-                AI programming, persistent player data, RPG systems, combat
-                mechanics, and gameplay architecture while creating a complete
-                gameplay experience.
+                <strong>Development Context:</strong> Cyber Threat was developed
+                as a solo Unity project to improve my understanding of AI
+                behaviour, NavMesh navigation, combat systems, mission design,
+                and object-oriented gameplay architecture in a 3D environment.
               </p>
             </div>
             <div id="profile-text-secondary">
               <p>
-                <strong>What I Learned:</strong> Throughout development I
-                gained practical experience building enemy AI, combat systems,
-                experience and leveling mechanics, skill trees, persistent
-                player progression, animation events, sprite sorting, gameplay
-                architecture, and debugging interconnected gameplay systems.
+                <strong>What I Learned:</strong> Throughout development I gained
+                practical experience building state-based enemy AI, combat
+                systems, shooting mechanics, mission frameworks, interaction
+                systems, event-driven gameplay, level design, and debugging
+                complex gameplay interactions.
               </p>
               <p>
-                <strong>Biggest Challenge:</strong> One of the largest
-                challenges was implementing persistent player progression across
-                multiple scenes while ensuring player level, unlocked skills,
-                and collected coins remained synchronized throughout the game.
+                <strong>Biggest Challenge:</strong> One of the biggest
+                challenges was developing enemy AI that could smoothly
+                transition between patrol, detection, chase, and attack states
+                while maintaining reliable navigation and responsive combat
+                behaviour.
               </p>
             </div>
           </div>
@@ -167,60 +164,58 @@
             <article class="project-tile">
               <h3>Combat and Enemy AI</h3>
               <p>
-                Combat is driven by state-based enemy AI that allows enemies to
-                detect the player, chase them, and attack once within range.
-                Each enemy has unique attack ranges, attack speeds, and
-                behaviours to create varied combat encounters. Player also must
-                manage stamina to avoid overextending attacks and leaving
-                themselves vulnerable to enemy counterattacks.
+                Combat is driven by intelligent enemy AI that patrols designated
+                areas, detects the player, pursues them using Unity's NavMesh
+                system, and attacks once within range. Enemies also react
+                dynamically when damaged, immediately becoming aggressive and
+                chasing the player.
               </p>
               <h4 class="project-tech-heading">Implemented Features</h4>
               <ul class="project-tech-list">
-                <li>Stamina-gated melee attacks.</li>
-                <li>Enemy detection system.</li>
-                <li>State-based AI (Idle, Chase, Attack).</li>
-                <li>Unique enemy attack ranges.</li>
+                <li>Enemy patrol system.</li>
+                <li>Player detection and chase AI.</li>
+                <li>State-based AI behaviours.</li>
+                <li>Reactive enemy aggression.</li>
+                <li>Combat and shooting mechanics.</li>
                 <li>Health and damage system.</li>
-                <li>Player combat mechanics.</li>
-                <li>Loot drops from defeated enemies.</li>
               </ul>
             </article>
 
             <article class="project-tile">
-              <h3>World Systems</h3>
+              <h3>Mission And Gameplay Systems</h3>
               <p>
-                The world combines exploration with RPG mechanics through shops,
-                loot collection, enemy encounters, and intuitive UI systems.
-                Sprite sorting and layered environments create believable depth
-                throughout the game world.
-              </p>
-              <h4 class="project-tech-heading">Design Highlights</h4>
-              <ul class="project-tech-list">
-                <li>Shop system.</li>
-                <li>Loot collection.</li>
-                <li>HUD and gameplay UI.</li>
-                <li>Player health display.</li>
-                <li>Scene transitions.</li>
-                <li>2D sprite sorting and layering.</li>
-              </ul>
-            </article>
-
-            <article class="project-tile">
-              <h3>Player Progression</h3>
-              <p>
-                Players earn experience by defeating enemies and leveling up to
-                unlock new abilities. A three-branch skill tree allows players
-                to specialise in different combat styles while persistent player
-                progression carries progress across scenes.
+                Players progress by completing mission objectives while fighting
+                through enemy-controlled areas. Interactive objects and
+                contextual UI prompts guide players through objectives and
+                create a structured gameplay experience.
               </p>
               <h4 class="project-tech-heading">Gameplay Systems</h4>
               <ul class="project-tech-list">
-                <li>Experience and leveling system.</li>
-                <li>Three-branch skill tree.</li>
-                <li>Persistent player progression.</li>
-                <li>Character stat progression.</li>
-                <li>Unlockable combat abilities.</li>
-                <li>Progressive gameplay difficulty.</li>
+                <li>Mission objective framework.</li>
+                <li>Interactive object system.</li>
+                <li>Context-sensitive interaction prompts.</li>
+                <li>HUD and gameplay UI.</li>
+                <li>Objective progression.</li>
+                <li>Player feedback systems.</li>
+              </ul>
+            </article>
+
+            <article class="project-tile">
+              <h3>Weapons And Technical Systems</h3>
+              <p>
+                Players engage enemies using ranged combat supported by weapon
+                reloading, health management, and responsive gameplay systems.
+                The project uses modular, object-oriented code to allow gameplay
+                systems to remain reusable and expandable.
+              </p>
+              <h4 class="project-tech-heading">Implemented Features</h4>
+              <ul class="project-tech-list">
+                <li>Weapon firing system.</li>
+                <li>Reload mechanics.</li>
+                <li>Player health management.</li>
+                <li>Event-driven gameplay systems.</li>
+                <li>NavMesh pathfinding.</li>
+                <li>Object-oriented architecture.</li>
               </ul>
             </article>
           </div>
@@ -234,16 +229,15 @@
             <article class="project-tile">
               <h3>Completed</h3>
               <ul class="project-tech-list">
-                <li>Enemy AI detection and chase system.</li>
-                <li>Combat system.</li>
+                <li>Enemy AI patrol, detection, chase and attack system.</li>
+                <li>Combat and shooting mechanics.</li>
+                <li>Weapon reload system.</li>
+                <li>Mission objective framework.</li>
+                <li>Interactive object system.</li>
                 <li>Health and damage system.</li>
-                <li>Experience and leveling.</li>
-                <li>Three-branch skill tree.</li>
-                <li>Persistent player progression.</li>
-                <li>Loot system.</li>
-                <li>Shop system.</li>
                 <li>HUD and gameplay UI.</li>
-                <li>Controller support.</li>
+                <li>NavMesh pathfinding.</li>
+                <li>State-based enemy AI.</li>
               </ul>
             </article>
 
@@ -262,13 +256,14 @@
                 <li>Save and load system.</li>
                 <li>Boss encounters.</li>
                 <li>Additional enemy archetypes.</li>
-                <li>Expanded skill trees.</li>
-                <li>Inventory system.</li>
-                <li>Unique equipment and items.</li>
-                <li>Improved combat mechanics.</li>
                 <li>Settings menu.</li>
-                <li>Ambient environmental audio.</li>
+                <li>Expanded mission variety.</li>
+                <li>Additional weapon types.</li>
+                <li>Grenades and gadgets.</li>
                 <li>Improved animations and visual effects.</li>
+                <li>Expanded UI systems.</li>
+                <li>Story-driven cutscenes.</li>
+                <li>Voiced NPCs.</li>
               </ul>
             </article>
           </div>
@@ -282,8 +277,9 @@
             <article class="project-tile">
               <h3>Gameplay Video</h3>
               <p>
-                Watch Realm Of Ardga gameplay clips featuring combat,
-                exploration, progression, and enemy encounter pacing.
+                Watch demonstrations of Cyber Threat's enemy AI, combat
+                mechanics, shooting systems, weapon reloading, and mission
+                objective gameplay.
               </p>
               <div class="project-links">
                 <a
@@ -306,19 +302,21 @@
             <article class="project-tile">
               <h3>Screenshots</h3>
               <p>
-                Showcase screenshots for both levels, enemy encounters, UI
-                progression elements, and visual world details.
+                Screenshots showcase enemy encounters, mission objectives,
+                combat gameplay, interaction prompts, HUD elements, pause menu,
+                and player feedback systems.
               </p>
             </article>
 
             <article class="project-tile">
               <h3>Technical Notes</h3>
               <p>
-                Realm Of Ardga was built in Unity using C# and follows an
+                Cyber Threat was built in Unity using C# and follows an
                 object-oriented, modular architecture. Enemy behaviours are
-                implemented using state-based AI, while gameplay systems
-                communicate through event-driven logic. Persistent player data
-                allows progression to carry seamlessly across multiple scenes.
+                implemented using state-based AI supported by Unity's NavMesh
+                pathfinding system, while gameplay systems communicate through
+                event-driven logic to create responsive combat and mission
+                progression.
               </p>
               <h4 class="project-tech-heading">Technologies Used</h4>
               <ul class="project-tech-list">
@@ -328,8 +326,9 @@
                 <li>Git & GitHub</li>
                 <li>Object-Oriented Programming</li>
                 <li>State-Based AI</li>
+                <li>NavMesh Pathfinding</li>
                 <li>Event-Driven Programming</li>
-                <li>Persistent Data Management</li>
+                <li>Unity Universal Render Pipeline (URP)</li>
               </ul>
             </article>
           </div>
