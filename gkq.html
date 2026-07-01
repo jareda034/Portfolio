@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="General Knowledge Quiz project page layout and development breakdown." />
+    <title>General Knowledge Quiz | Jared Akigbesote</title>
+    <link rel="stylesheet" href="Assets/Css/style.css" />
+    <script src="Assets/Js/pixel-bg.js" defer></script>
+    <script src="Assets/Js/game-ui.js" defer></script>
+</head>
+
+<body>
+    <div class="xp-hud" aria-hidden="true">
+        <span class="xp-label">XP</span>
+        <div class="xp-track">
+            <div class="xp-fill" id="xp-fill"></div>
+        </div>
+    </div>
+    <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite"></div>
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand-block">
+                <h1>General Knowledge Quiz</h1>
+                <p id="subtitle">
+                    Project Breakdown | Interactive JavaScript Quiz
+                </p>
+            </div>
+            <div class="hud-stat-chip">
+                <span class="hud-dot hud-dot-warn"></span>
+                <span>Solo Project</span>
+            </div>
+            <nav aria-label="Project navigation">
+                <ul id="navbar">
+                    <li class="nav-item"><a href="#overview">Overview</a></li>
+                    <li class="nav-item"><a href="#features">Features</a></li>
+                    <li class="nav-item"><a href="#roadmap">Roadmap</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-backdrop" aria-hidden="true">
+                <canvas id="hero-pixel-canvas"></canvas>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">JavaScript | HTML | CSS | Interactive Quiz</p>
+                    <h2 id="welcome-heading">
+                        Test your general knowledge with a fast-paced, interactive quiz experience!
+                    </h2>
+                    <p class="hero-description">
+                        General Knowledge Quiz is a fast-paced web application that challenges players to answer
+                        multiple-choice questions against the clock. Built using HTML, CSS, and JavaScript, the project
+                        focuses on interactive UI, user feedback, and dynamic game logic.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#overview">View Details</a>
+                        <a class="button button-secondary" href="index.html#projects">Back To Portfolio</a>
+                    </div>
+                </div>
+
+                <article class="featured-project-box" aria-label="Project quick facts">
+                    <div class="featured-project-image">
+                        <img src="Assets/Images/Quizmain.png" alt="NC Cinema screenshot" />
+                    </div>
+                    <div class="featured-project-tag">Quick Facts</div>
+                    <h3>General Knowledge Quiz</h3>
+                    <p>Genre: Interactive Quiz Application</p>
+                    <p>Role: Solo Developer</p>
+                    <p>Language: HTML, CSS, JavaScript</p>
+                    <a href="https://github.com/jareda034/NCinema" class="project-link" target="_blank"
+                        rel="noopener noreferrer">View Repository -></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="overview" class="content-section">
+            <div class="container about-grid">
+                <h2>Project Overview</h2>
+                <div class="profile-text-container">
+                    <div id="profile-text">
+                        <p>
+                            <strong>Software Summary:</strong>General Knowledge Quiz is an interactive browser-based
+                            quiz designed to test a player's general knowledge while racing against a 30-second timer.
+                            Players answer multiple-choice questions, receive instant visual feedback after each answer,
+                            and are presented with their final score at the end of the quiz or when time expires.
+                        </p>
+                        <p>
+                            <strong>Core Goal:</strong> The goal of the project was to improve my understanding of
+                            JavaScript by building an interactive application featuring dynamic user interfaces, timers,
+                            score tracking, conditional logic, and responsive user feedback while creating an engaging
+                            quiz experience.
+                        </p>
+                        <p>
+                            <strong>Development Context:</strong> This project was developed to strengthen my front-end
+                            development skills with a particular focus on JavaScript programming. It introduced concepts
+                            such as DOM manipulation, event handling, timers, conditional logic, state management, and
+                            interactive user interfaces.
+                        </p>
+                    </div>
+                    <div id="profile-text-secondary">
+                        <p>
+                            <strong>What I Learned:</strong> During development I significantly improved my
+                            understanding of:
+                        <ul class="project-tech-list">
+                            <li>JavaScript programming</li>
+                            <li>DOM manipulation</li>
+                            <li>Event handling</li>
+                            <li>Conditional logic</li>
+                            <li>Timer implementation</li>
+                            <li>User interface feedback</li>
+                            <li>State management</li>
+                            <li>Debugging JavaScript</li>
+                            <li>Interactive web applications</li>
+                            <li>Responsive front-end design</li>
+                        </ul>
+                        </p>
+                        <p>
+                            <strong>Biggest Challenge:</strong> One of the biggest challenges was managing the quiz flow
+                            while ensuring users could only submit one answer per question. Implementing the timer
+                            alongside score tracking and replay functionality required careful state management to
+                            prevent users from interacting with the quiz after making their selection or when the timer
+                            expired.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Interactive Quiz System</h3>
+                        <p>
+                            Players answer multiple-choice questions through interactive answer boxes that provide
+                            immediate visual feedback. Correct answers are highlighted in green, incorrect selections
+                            are highlighted in red, and answers become locked once a choice has been made.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Multiple-choice questions</li>
+                            <li>Interactive answer selection</li>
+                            <li>Answer locking</li>
+                            <li>Hover effects</li>
+                            <li>Visual feedback system</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Timer And Score System</h3>
+                        <p>
+                            The application challenges players to complete the quiz within 30 seconds. A live countdown
+                            timer increases pressure, while the final score is displayed whether the player finishes the
+                            quiz or runs out of time.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>30-second countdown timer</li>
+                            <li>Automatic timeout detection</li>
+                            <li>Score tracking</li>
+                            <li>Finished & timeout screens</li>
+                            <li>Real-time progress</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>User Interface And Controls</h3>
+                        <p>
+                            The quiz uses dynamic interface elements to improve usability. Buttons appear only when
+                            required, and replay options allow users to quickly restart or play again after completing
+                            the quiz.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Dynamic button visibility</li>
+                            <li>Restart functionality</li>
+                            <li>Play Again system</li>
+                            <li>Responsive layouts</li>
+                            <li>Interactive UI feedback</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="content-section">
+            <div class="container">
+                <h2>Roadmap and Iteration</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Completed</h3>
+                        <ul class="project-tech-list">
+                            <li>Interactive quiz system</li>
+                            <li>Multiple-choice questions</li>
+                            <li>Countdown timer</li>
+                            <li>Score tracking</li>
+                            <li>Answer validation</li>
+                            <li>Replay functionality</li>
+                            <li>Responsive interface</li>
+                            <li>Visual answer feedback</li>
+                            <li>JavaScript game logic</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>In Progress</h3>
+                        <ul class="project-tech-list">
+                            <li>No active development.</li>
+                            <li>
+                                Project completed as a front-end portfolio piece.
+                            </li>
+                            <li>Future improvements listed separately.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Future Ideas</h3>
+                        <ul class="project-tech-list">
+                            <li>Online leaderboard</li>
+                            <li>User accounts</li>
+                            <li>Question categories</li>
+                            <li>Difficulty selection</li>
+                            <li>Randomised question pools</li>
+                            <li>Sound effects</li>
+                            <li>Animated transitions</li>
+                            <li>Achievements system</li>
+                            <li>Statistics tracking</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="content-section">
+            <div class="container">
+                <h2>Media and Links</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Project Repository</h3>
+                        <p>
+                            Explore the complete source code for General Knowledge Quiz, including the JavaScript quiz
+                            logic, timer system, score tracking, DOM manipulation, and responsive interface
+                            implementation.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-box-button github-button" href="https://github.com/jareda034/NCinema"
+                                target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                        </div>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Live Demo</h3>
+                        <p>
+                            Play the live quiz application to experience the countdown timer, interactive question
+                            system, visual feedback, and score tracking mechanics.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-box-button github-button"
+                                href="https://nc-cinema-booking-5e9a5e0e5b5d.herokuapp.com/" target="_blank"
+                                rel="noopener noreferrer">View Live</a>
+                        </div>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Technical Notes</h3>
+                        <p>
+                            General Knowledge Quiz was developed using HTML, CSS, and JavaScript with a strong emphasis
+                            on interactive front-end programming. The application makes extensive use of DOM
+                            manipulation, event listeners, conditional logic, and timers to create a responsive quiz
+                            experience. Dynamic UI updates provide immediate visual feedback by highlighting correct and
+                            incorrect answers, while JavaScript manages question progression, score calculation, timer
+                            functionality, and replay mechanics. Developing this project strengthened my understanding
+                            of interactive web applications, JavaScript programming, debugging, state management, and
+                            creating engaging user experiences.
+                        </p>
+                        <h4 class="project-tech-heading">Technologies Used</h4>
+
+                        <ul class="project-tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>GitHub Pages</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <h2 id="contact-heading">Project Contact</h2>
+            <nav aria-label="Contact links">
+                <ul id="contact-bar">
+                    <li class="nav-item">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Marsh%27s%20Run%20Project%20Inquiry"
+                            target="_blank" rel="noopener noreferrer">Email</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/jareda034" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://ping-wing.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
