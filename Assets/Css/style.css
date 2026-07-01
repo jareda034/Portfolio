@@ -605,8 +605,8 @@ footer {
   z-index: 140;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
+  gap: clamp(4px, 1vw, 8px);
+  padding: clamp(6px, 1vw, 8px) clamp(8px, 1.5vw, 10px);
   border-radius: 999px;
   border: 1px solid var(--hud-line);
   background: rgba(10, 17, 24, 0.84);
@@ -614,15 +614,15 @@ footer {
 }
 
 .xp-label {
-  font-size: 0.72rem;
+  font-size: clamp(0.6rem, 2vw, 0.72rem);
   letter-spacing: 1px;
   font-weight: 700;
   color: #a3ffd0;
 }
 
 .xp-track {
-  width: min(32vw, 230px);
-  height: 8px;
+  width: clamp(80px, 20vw, 230px);
+  height: clamp(6px, 1vw, 8px);
   border-radius: 999px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.1);
