@@ -148,6 +148,76 @@ function initProjectTileButtons() {
 }
 
 window.addEventListener("scroll", updateXpBar, { passive: true });
+
+function initImageLightbox() {
+  let currentImageIndex = 0;
+  let currentGalleryImages = [];
+
+  const modal = document.getElementById("image-lightbox");
+  if (!modal) return;
+
+  const modalImage = modal.querySelector(".lightbox-image-container img");
+  const closeBtn = modal.querySelector(".lightbox-close-button");
+  const prevBtn = modal.querySelector(".lightbox-prev-button");
+  const nextBtn = modal.querySelector(".lightbox-next-button");
+  const counter = modal.querySelector(".lightbox-counter");
+
+  function openLightbox(imageElement) {
+    const gallery = imageElement.closest(".screenshot-gallery");
+    if (!gallery) return;
+
+    currentGalleryImages = Array.from(gallery.querySelectorAll("img"));
+    currentImageIndex = currentGalleryImages.indexOf(imageElement);
+
+    showImage(currentImageIndex);
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    modal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  function showImage(index) {
+    if (index < 0 || index >= currentGalleryImages.length) return;
+
+    currentImageIndex = index;
+    const img = currentGalleryImages[index];
+    modalImage.src = img.src;
+    modalImage.alt = img.alt;
+
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === currentGalleryImages.length - 1;
+
+    counter.textContent = `${index + 1} / ${currentGalleryImages.length}`;
+  }
+
+  // Event listeners
+  document.querySelectorAll(".screenshot-gallery img").forEach((img) => {
+    img.addEventListener("click", () => openLightbox(img));
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  prevBtn.addEventListener("click", () => showImage(currentImageIndex - 1));
+  nextBtn.addEventListener("click", () => showImage(currentImageIndex + 1));
+
+  // Keyboard navigation
+  document.addEventListener("keydown", (e) => {
+    if (!modal.classList.contains("is-open")) return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft" && currentImageIndex > 0) showImage(currentImageIndex - 1);
+    if (e.key === "ArrowRight" && currentImageIndex < currentGalleryImages.length - 1) {
+      showImage(currentImageIndex + 1);
+    }
+  });
+
+  // Close on background click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeLightbox();
+  });
+}
 window.addEventListener("resize", updateXpBar);
 
 updateXpBar();
@@ -155,3 +225,4 @@ initRevealAnimations();
 initAchievements();
 initProjectTileButtons();
 initGameCursor();
+initImageLightbox();
