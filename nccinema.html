@@ -1,376 +1,332 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Marsh's Run project page layout and development breakdown."
-    />
-    <title>Marsh's Run | Jared Akigbesote</title>
+    <meta name="description" content="NC Cinema project page layout and development breakdown." />
+    <title>NC Cinema | Jared Akigbesote</title>
     <link rel="stylesheet" href="Assets/Css/style.css" />
     <script src="Assets/Js/pixel-bg.js" defer></script>
     <script src="Assets/Js/game-ui.js" defer></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="xp-hud" aria-hidden="true">
-      <span class="xp-label">XP</span>
-      <div class="xp-track">
-        <div class="xp-fill" id="xp-fill"></div>
-      </div>
+        <span class="xp-label">XP</span>
+        <div class="xp-track">
+            <div class="xp-fill" id="xp-fill"></div>
+        </div>
     </div>
-    <div
-      class="achievement-toast"
-      id="achievement-toast"
-      role="status"
-      aria-live="polite"
-    ></div>
+    <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite"></div>
     <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
     <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
 
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand-block">
-          <h1>Marsh's Run</h1>
-          <p id="subtitle">Project Breakdown | 2D Platformer</p>
+        <div class="container header-inner">
+            <div class="brand-block">
+                <h1>NC Cinema</h1>
+                <p id="subtitle">
+                    Project Breakdown | Full-Stack Django Web Application
+                </p>
+            </div>
+            <div class="hud-stat-chip">
+                <span class="hud-dot hud-dot-warn"></span>
+                <span>Solo Project</span>
+            </div>
+            <nav aria-label="Project navigation">
+                <ul id="navbar">
+                    <li class="nav-item"><a href="#overview">Overview</a></li>
+                    <li class="nav-item"><a href="#features">Features</a></li>
+                    <li class="nav-item"><a href="#roadmap">Roadmap</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="hud-stats" aria-label="Project status">
-          <div class="hud-stat-chip">
-            <span class="hud-dot"></span>
-            <span>Playable Build</span>
-          </div>
-          <div class="hud-stat-chip">
-            <span class="hud-dot hud-dot-warn"></span>
-            <span>Solo Project</span>
-          </div>
-          <nav aria-label="Project navigation">
-            <ul id="navbar">
-              <li class="nav-item"><a href="#overview">Overview</a></li>
-              <li class="nav-item"><a href="#features">Features</a></li>
-              <li class="nav-item"><a href="#roadmap">Roadmap</a></li>
-              <li class="nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
         </div>
-      </div>
     </header>
 
     <main>
-      <section class="hero-section">
-        <div class="hero-backdrop" aria-hidden="true">
-          <canvas id="hero-pixel-canvas"></canvas>
-        </div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Unity | C# | Precision Movement</p>
-            <h2 id="welcome-heading">
-              Sprint, Jump, and Master Every Platform
-            </h2>
-            <p class="hero-description">
-              Marsh's Run is a 2D platformer built in Unity where players race
-              against the clock through challenging levels using responsive
-              movement mechanics including wall jumping and wall sliding.
-              Collect coins to extend the timer, avoid deadly hazards, and reach
-              the goal before time runs out.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#overview">View Details</a>
-              <a class="button button-secondary" href="index.html#projects"
-                >Back To Portfolio</a
-              >
-              <a
-                class="button button-cv"
-                href="https://ping-wing.itch.io/marshs-run"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Play On Itch.io</a
-              >
+        <section class="hero-section">
+            <div class="hero-backdrop" aria-hidden="true">
+                <canvas id="hero-pixel-canvas"></canvas>
             </div>
-          </div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Django | Python | Full-Stack Development</p>
+                    <h2 id="welcome-heading">
+                        Full-Stack Cinema Booking Web Application
+                    </h2>
+                    <p class="hero-description">
+                        NC Cinema is a full-stack cinema booking web application built
+                        with Django. Users can browse movies, view screening times, create
+                        an account, and book cinema tickets through a responsive
+                        interface, while administrators manage movies, screenings, and
+                        bookings through Django's admin panel.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#overview">View Details</a>
+                        <a class="button button-secondary" href="index.html#projects">Back To Portfolio</a>
+                    </div>
+                </div>
 
-          <article
-            class="featured-project-box"
-            aria-label="Project quick facts"
-          >
-            <div class="featured-project-image">
-              <img
-                src="Assets/Images/Marsh's-run.png"
-                alt="Marsh's Run gameplay screenshot"
-              />
+                <article class="featured-project-box" aria-label="Project quick facts">
+                    <div class="featured-project-image">
+                        <img src="Assets/Images/NCinema.png" alt="NC Cinema screenshot" />
+                    </div>
+                    <div class="featured-project-tag">Quick Facts</div>
+                    <h3>NC Cinema</h3>
+                    <p>Genre: Full-Stack Web Application</p>
+                    <p>Role: Solo Developer</p>
+                    <p>Framework: Django</p>
+                    <p>Language: Python, HTML, CSS</p>
+                    <p>Database: SQLite</p>
+                    <a href="https://github.com/jareda034/NCinema" class="project-link" target="_blank"
+                        rel="noopener noreferrer">View Repository -></a>
+                </article>
             </div>
-            <div class="featured-project-tag">Quick Facts</div>
-            <h3>Marsh's Run</h3>
-            <p>Genre: 2D Platformer</p>
-            <p>Role: Solo Developer</p>
-            <p>Engine: Unity</p>
-            <a
-              href="https://github.com/jareda034/MarshsRunScripts"
-              class="project-link"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View Scripts -></a
-            >
-          </article>
-        </div>
-      </section>
+        </section>
 
-      <section id="overview" class="content-section">
-        <div class="container about-grid">
-          <h2>Project Overview</h2>
-          <div class="profile-text-container">
-            <div id="profile-text">
-              <p>
-                <strong>Game Summary:</strong> Marsh's Run is a fast-paced 2D
-                platformer focused on precision movement and time management.
-                Players must navigate hazards while collecting coins that extend
-                the countdown timer and reaching checkpoints before progressing
-                to the finish.
-              </p>
-              <p>
-                <strong>Core Goal:</strong> The project was designed around
-                creating responsive and satisfying movement mechanics, with wall
-                jumping and wall sliding encouraging creative platforming and
-                rewarding player skill.
-              </p>
-              <p>
-                <strong>Development Context:</strong> This project was developed
-                over three weeks using Unity and C#. It focused on building
-                polished platforming mechanics while introducing
-                risk-versus-reward gameplay through a countdown timer and
-                checkpoint system.
-              </p>
+        <section id="overview" class="content-section">
+            <div class="container about-grid">
+                <h2>Project Overview</h2>
+                <div class="profile-text-container">
+                    <div id="profile-text">
+                        <p>
+                            <strong>Software Summary:</strong>NC Cinema is a full-stack web
+                            application developed using Django that allows users to browse
+                            currently showing movies, view detailed information, register an
+                            account, and book cinema screenings online. The application
+                            includes authentication, role-based administration, and
+                            relational database management to create a complete cinema
+                            booking experience.
+                        </p>
+                        <p>
+                            <strong>Core Goal:</strong> The goal of the project was to
+                            develop a complete full-stack web application that demonstrates
+                            authentication, database relationships, CRUD operations,
+                            responsive UI design, and role-based access control while
+                            providing users with an intuitive online cinema booking
+                            experience.
+                        </p>
+                        <p>
+                            <strong>Development Context:</strong> This project was developed
+                            as part of my Full Stack Software Development diploma. It
+                            focused on applying backend web development concepts including
+                            Django models, authentication, relational databases, deployment,
+                            and object-oriented programming.
+                        </p>
+                    </div>
+                    <div id="profile-text-secondary">
+                        <p>
+                            <strong>What I Learned:</strong> During development I significantly improved my
+                            understanding of
+                        <ul>
+                            <li>Django web development</li>
+                            <li>Relational database design</li>
+                            <li>Authentication & authorization</li>
+                            <li>CRUD operations</li>
+                            <li>Django ORM</li>
+                            <li>Object-oriented programming</li>
+                            <li>Responsive web design</li>
+                            <li>Cloudinary media management</li>
+                            <li>Full-stack application architecture</li>
+                            <li>Deployment using Heroku</li>
+                        </ul>
+                        </p>
+                        <p>
+                            <strong>Biggest Challenge:</strong> One of the biggest challenges was designing the
+                            relationships between movies, screenings, bookings, and users while ensuring bookings
+                            remained secure and accessible only to authenticated users. This required careful planning
+                            of Django models, foreign key relationships, authentication decorators, and booking
+                            validation.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div id="profile-text-secondary">
-              <p>
-                <strong>What I Learned:</strong> During development I gained
-                experience implementing controller support, checkpoint systems,
-                event-driven programming, collision detection, 2D physics, UI
-                development, and balancing movement mechanics for responsive
-                gameplay.
-              </p>
-              <p>
-                <strong>Biggest Challenge:</strong> Balancing the timer system
-                was the largest challenge. Players lose 30 seconds when they
-                die, so careful tuning of coin values and checkpoint placement
-                was required to create tension without making the game feel
-                unfair..
-              </p>
+        </section>
+
+        <section id="features" class="content-section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Movie Browsing And Booking</h3>
+                        <p>
+                            Users can browse available movies, view detailed information, and book screenings after
+                            logging into their account.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Movie listing page.</li>
+                            <li>Individual movie detail pages.</li>
+                            <li>Screening timetable.</li>
+                            <li>Seat booking system.</li>
+                            <li>Booking confirmation messages.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Authentication And User Accounts</h3>
+                        <p>
+                            The application includes a complete authentication system allowing users to securely
+                            register, log in, and manage bookings.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>User registration.</li>
+                            <li>Login & logout.</li>
+                            <li>Protected booking routes.</li>
+                            <li>Django authentication system.</li>
+                            <li>Flash success messages.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Database And Administration</h3>
+                        <p>
+                            Administrators can manage the entire cinema through Django's built-in admin panel.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Movie management.</li>
+                            <li>Screening management.</li>
+                            <li>Booking management.</li>
+                            <li>Relational database.</li>
+                            <li>Django Admin interface.</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="features" class="content-section">
-        <div class="container">
-          <h2>Gameplay Features</h2>
-          <div class="project-grid">
-            <article class="project-tile">
-              <h3>Movement Systems</h3>
-              <p>
-                The player movement system focuses on responsive controls and
-                precision platforming. Alongside standard running and jumping,
-                players can wall slide and wall jump to access difficult areas
-                and overcome environmental challenges..
-              </p>
-              <h4 class="project-tech-heading">Implemented Features</h4>
-              <ul class="project-tech-list">
-                <li>Responsive player movement.</li>
-                <li>Ground and air movement.</li>
-                <li>Wall slide mechanic.</li>
-                <li>Wall jump mechanic.</li>
-                <li>Controller support.</li>
-                <li>Physics-based movement using Unity's Rigidbody2D.</li>
-              </ul>
-            </article>
+        <section id="roadmap" class="content-section">
+            <div class="container">
+                <h2>Roadmap and Iteration</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Completed</h3>
+                        <ul class="project-tech-list">
+                            <li>Movie browsing.</li>
+                            <li>User authentication.</li>
+                            <li>Cinema booking system.</li>
+                            <li>Responsive layout.</li>
+                            <li>Movie detail pages.</li>
+                            <li>Admin dashboard.</li>
+                            <li>Relational database.</li>
+                            <li>Cloudinary integration.</li>
+                            <li>Deployment on Heroku.</li>
+                        </ul>
+                    </article>
 
-            <article class="project-tile">
-              <h3>Level Flow</h3>
-              <p>
-                Levels were designed to gradually introduce mechanics before
-                combining them into more challenging platforming sections.
-                Checkpoints reduce frustration while encouraging players to
-                continue improving their movement..
-              </p>
-              <h4 class="project-tech-heading">Design Highlights</h4>
-              <ul class="project-tech-list">
-                <li>Gradual introduction of movement mechanics.</li>
-                <li>Checkpoint placement to reduce repetition.</li>
-                <li>Risk-versus-reward coin placement.</li>
-                <li>Hazards that encourage mastery of movement.</li>
-              </ul>
-            </article>
+                    <article class="project-tile">
+                        <h3>In Progress</h3>
+                        <ul class="project-tech-list">
+                            <li>No active development.</li>
+                            <li>
+                                Project completed as a gameplay programming portfolio piece.
+                            </li>
+                            <li>Future improvements listed separately.</li>
+                        </ul>
+                    </article>
 
-            <article class="project-tile">
-              <h3>Timer and Penalties</h3>
-              <p>
-                The core gameplay revolves around completing the level before
-                the timer expires. Collecting coins rewards additional time,
-                while dying removes valuable seconds, creating constant pressure
-                throughout the level.
-              </p>
-              <h4 class="project-tech-heading">Gameplay Systems</h4>
-              <ul class="project-tech-list">
-                <li>Countdown timer.</li>
-                <li>30-second death penalty.</li>
-                <li>Three collectible coin types.</li>
-                <li>Bonus 30 seconds awarded every 40 collected coins.</li>
-                <li>Risk-versus-reward gameplay loop.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+                    <article class="project-tile">
+                        <h3>Future Ideas</h3>
+                        <ul class="project-tech-list">
+                            <li>Online payments.</li>
+                            <li>Booking history.</li>
+                            <li>User reviews.</li>
+                            <li>Movie ratings.</li>
+                            <li>Search functionality.</li>
+                            <li>Advanced filtering.</li>
+                            <li>Email confirmations.</li>
+                            <li>Cinema seat selection.</li>
+                            <li>User profiles.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-      <section id="roadmap" class="content-section">
-        <div class="container">
-          <h2>Roadmap and Iteration</h2>
-          <div class="project-grid">
-            <article class="project-tile">
-              <h3>Completed</h3>
-              <ul class="project-tech-list">
-                <li>Player movement system.</li>
-                <li>Wall jumping and wall sliding.</li>
-                <li>Checkpoint & respawn system.</li>
-                <li>Countdown timer.</li>
-                <li>Death penalty system.</li>
-                <li>Coin collection.</li>
-                <li>Multiple coin values.</li>
-                <li>Controller support.</li>
-                <li>HUD and gameplay UI.</li>
-                <li>Hazard system.</li>
-              </ul>
-            </article>
+        <section id="media" class="content-section">
+            <div class="container">
+                <h2>Media and Links</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Project Walkthrough</h3>
+                        <p>
+                            Watch demonstrations of Marsh's Run's movement mechanics,
+                            checkpoint system, and timer-based gameplay.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-box-button github-button"
+                                href="https://github.com/jareda034/MarshsRunScripts" target="_blank"
+                                rel="noopener noreferrer">GitHub Repo</a>
+                        </div>
+                    </article>
 
-            <article class="project-tile">
-              <h3>In Progress</h3>
-              <ul class="project-tech-list">
-                <li>No active development.</li>
-                <li>
-                  Project completed as a gameplay programming portfolio piece.
-                </li>
-                <li>Future improvements listed separately.</li>
-              </ul>
-            </article>
+                    <article class="project-tile">
+                        <h3>Screenshots</h3>
+                        <p>
+                            Screenshots showcase the game's environments, checkpoints,
+                            hazards, timer UI, collectibles, and victory conditions.
+                        </p>
+                    </article>
 
-            <article class="project-tile">
-              <h3>Future Ideas</h3>
-              <ul class="project-tech-list">
-                <li>Additional levels.</li>
-                <li>Moving platforms.</li>
-                <li>More obstacle types.</li>
-                <li>Achievement system.</li>
-                <li>Leaderboards.</li>
-                <li>Save system.</li>
-                <li>Additional player abilities.</li>
-                <li>Settings menu.</li>
-                <li>Improved visual effects.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+                    <article class="project-tile">
+                        <h3>Technical Notes</h3>
+                        <p>
+                            NC Cinema was developed using Python and Django, following the Model-View-Template (MVT)
+                            architecture to separate application logic, data, and presentation. The project utilises
+                            Django's ORM to manage relational database models for movies, screenings, and bookings, with
+                            foreign key relationships ensuring data integrity throughout the application. Authentication
+                            and authorization are implemented using Django's built-in user system and protected routes,
+                            while media assets are hosted through Cloudinary. The front end was built with HTML and CSS,
+                            version control was managed using Git and GitHub, and the application was deployed to
+                            Heroku. Developing this project strengthened my understanding of full-stack architecture,
+                            relational databases, CRUD operations, authentication, deployment, and maintainable software
+                            design.
+                        </p>
+                        <h4 class="project-tech-heading">Technologies Used</h4>
 
-      <section id="media" class="content-section">
-        <div class="container">
-          <h2>Media and Links</h2>
-          <div class="project-grid">
-            <article class="project-tile">
-              <h3>Gameplay Video</h3>
-              <p>
-                Watch demonstrations of Marsh's Run's movement mechanics,
-                checkpoint system, and timer-based gameplay.
-              </p>
-              <div class="project-links">
-                <a
-                  class="project-box-button github-button"
-                  href="https://github.com/jareda034/MarshsRunScripts"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
-                <a
-                  class="project-box-button itch-button"
-                  href="https://ping-wing.itch.io/marshs-run"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Itch.io Page</a
-                >
-              </div>
-            </article>
-
-            <article class="project-tile">
-              <h3>Screenshots</h3>
-              <p>
-                Screenshots showcase the game's environments, checkpoints,
-                hazards, timer UI, collectibles, and victory conditions.
-              </p>
-            </article>
-
-            <article class="project-tile">
-              <h3>Technical Notes</h3>
-              <p>
-                The project was built using Unity and C# with a modular,
-                object-oriented architecture. Gameplay systems communicate
-                through event-driven logic, while physics-based movement and
-                checkpoint management create a smooth gameplay experience.
-              </p>
-              <h4 class="project-tech-heading">Technologies Used</h4>
-
-              <ul class="project-tech-list">
-                <li>Unity</li>
-                <li>C#</li>
-                <li>Visual Studio</li>
-                <li>Git & GitHub</li>
-                <li>Object-Oriented Programming</li>
-                <li>Event-Driven Programming</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SQLite</li>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Heroku</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contact">
-      <div class="container">
-        <h2 id="contact-heading">Project Contact</h2>
-        <nav aria-label="Contact links">
-          <ul id="contact-bar">
-            <li class="nav-item">
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Marsh%27s%20Run%20Project%20Inquiry"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Email</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://github.com/jareda034"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://ping-wing.itch.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Itch.io</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container">
+            <h2 id="contact-heading">Project Contact</h2>
+            <nav aria-label="Contact links">
+                <ul id="contact-bar">
+                    <li class="nav-item">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Marsh%27s%20Run%20Project%20Inquiry"
+                            target="_blank" rel="noopener noreferrer">Email</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/jareda034" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://ping-wing.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
