@@ -404,6 +404,26 @@ a {
   gap: 16px;
 }
 
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.screenshot-gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.screenshot-gallery img:hover {
+  transform: scale(1.03);
+  border-color: var(--accent, #7dd3fc);
+}
+
 .project-tile {
   border: 1px solid var(--line);
   background:
