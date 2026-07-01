@@ -739,6 +739,22 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .xp-hud {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .xp-label {
+    font-size: 0.6rem;
+  }
+
+  .xp-track {
+    width: clamp(60px, 15vw, 140px);
+    height: 6px;
+  }
+}
+
 @media (max-width: 640px) {
   .header-inner {
     flex-direction: column;
@@ -756,6 +772,10 @@ footer {
   .button {
     width: 100%;
     text-align: center;
+  }
+
+  .xp-hud {
+    display: none;
   }
 
   .project-grid {
