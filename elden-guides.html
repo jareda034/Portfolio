@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="EldenGuides project page layout and development breakdown." />
+    <title>EldenGuides | Jared Akigbesote</title>
+    <link rel="stylesheet" href="Assets/Css/style.css" />
+    <script src="Assets/Js/pixel-bg.js" defer></script>
+    <script src="Assets/Js/game-ui.js" defer></script>
+</head>
+
+<body>
+    <div class="xp-hud" aria-hidden="true">
+        <span class="xp-label">XP</span>
+        <div class="xp-track">
+            <div class="xp-fill" id="xp-fill"></div>
+        </div>
+    </div>
+    <div class="achievement-toast" id="achievement-toast" role="status" aria-live="polite"></div>
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand-block">
+                <h1>EldenGuides</h1>
+                <p id="subtitle">
+                    Project Breakdown | Elden Ring Fan Website
+                </p>
+            </div>
+            <div class="hud-stat-chip">
+                <span class="hud-dot hud-dot-warn"></span>
+                <span>Solo Project</span>
+            </div>
+            <nav aria-label="Project navigation">
+                <ul id="navbar">
+                    <li class="nav-item"><a href="#overview">Overview</a></li>
+                    <li class="nav-item"><a href="#features">Features</a></li>
+                    <li class="nav-item"><a href="#roadmap">Roadmap</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-backdrop" aria-hidden="true">
+                <canvas id="hero-pixel-canvas"></canvas>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">HTML5 | CSS3 | Front-End Development</p>
+                    <h2 id="welcome-heading">
+                        Research, Discover, and Explore Elden Ring's Information.
+                    </h2>
+                    <p class="hero-description">
+                        EldenGuides is a responsive fan website designed to help Elden Ring players discover guides,
+                        explore game mechanics, and access useful gameplay tools through a clean and intuitive
+                        interface..
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#overview">View Details</a>
+                        <a class="button button-secondary" href="index.html#projects">Back To Portfolio</a>
+                    </div>
+                </div>
+
+                <article class="featured-project-box" aria-label="Project quick facts">
+                    <div class="featured-project-image">
+                        <img src="Assets/Images/EldenGuides.png" alt="EldenGuides screenshot" />
+                    </div>
+                    <div class="featured-project-tag">Quick Facts</div>
+                    <h3>EldenGuides</h3>
+                    <p>Genre: Gaming Information Website</p>
+                    <p>Role: Solo Developer</p>
+                    <p>Language: HTML, CSS</p>
+                    <a href="https://github.com/jareda034/EldenGuides" class="project-link" target="_blank"
+                        rel="noopener noreferrer">View Repository -></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="overview" class="content-section">
+            <div class="container about-grid">
+                <h2>Project Overview</h2>
+                <div class="profile-text-container">
+                    <div id="profile-text">
+                        <p>
+                            <strong>Website Summary:</strong> EldenGuides is a responsive website created for Elden Ring
+                            players looking for guides, resources, and helpful tools. The website provides organised
+                            navigation to different areas of the game while maintaining a consistent visual design
+                            inspired by Elden Ring's atmosphere and aesthetic.
+                        </p>
+                        <p>
+                            <strong>Core Goal:</strong> The goal of the project was to design and develop an
+                            easy-to-navigate gaming website that demonstrates responsive web design principles,
+                            user-focused layouts, and consistent styling while providing useful information for players.
+                        </p>
+                        <p>
+                            <strong>Development Context:</strong> This project was developed to improve my front-end web
+                            development skills using HTML and CSS. It focused on responsive layouts, website navigation,
+                            visual consistency, accessibility, and creating a user-friendly browsing experience.
+                        </p>
+                    </div>
+                    <div id="profile-text-secondary">
+                        <p>
+                            <strong>What I Learned:</strong> During development I significantly improved my
+                            understanding of
+                        <ul class="project-tech-list">
+                            <li>Responsive web design</li>
+                            <li>HTML semantic structure</li>
+                            <li>CSS layouts</li>
+                            <li>Navigation design</li>
+                            <li>Dropdown menus</li>
+                            <li>User experience design</li>
+                            <li>Visual consistency</li>
+                            <li>Responsive navigation</li>
+                            <li>Website accessibility</li>
+                            <li>Page layout planning</li>
+                        </ul>
+                        </p>
+                        <p>
+                            <strong>Biggest Challenge:</strong> One of the biggest challenges was designing a navigation
+                            system that worked well across both desktop and mobile devices. Creating responsive dropdown
+                            menus while keeping navigation intuitive and visually clean required careful planning of the
+                            page layout and user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-section">
+            <div class="container">
+                <h2>Features</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Navigation And Responsive Design</h3>
+                        <p>
+                            The website features a responsive navigation system that adapts to different screen sizes,
+                            providing a dropdown menu for smaller devices while displaying a full navigation bar on
+                            desktop.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Responsive navigation bar</li>
+                            <li>Mobile dropdown menu</li>
+                            <li>Desktop navigation layout</li>
+                            <li>Footer social media links</li>
+                            <li>Consistent page navigation</li>i>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Guides And Resources</h3>
+                        <p>
+                            Players can browse multiple guide categories covering different areas of Elden Ring through
+                            organised sections and collapsible dropdown menus.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Guide categories</li>
+                            <li>Dropdown content sections</li>
+                            <li>Visual category cards</li>
+                            <li>Gaming resources</li>
+                            <li>Information hub</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>User Interface And Design</h3>
+                        <p>
+                            The website uses a colour palette and imagery inspired by Elden Ring to create an immersive
+                            experience while maintaining readability and consistent styling.
+                        </p>
+                        <h4 class="project-tech-heading">Implementation Notes</h4>
+                        <ul class="project-tech-list">
+                            <li>Responsive layouts</li>
+                            <li>Consistent styling</li>
+                            <li>Game-themed colour palette</li>
+                            <li>Hero video integration</li>
+                            <li>Sign-up page</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="content-section">
+            <div class="container">
+                <h2>Roadmap and Iteration</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Completed</h3>
+                        <ul class="project-tech-list">
+                            <li>Responsive navigation</li>
+                            <li>Homepage</li>
+                            <li>Guide pages</li>
+                            <li>Items page</li>
+                            <li>Responsive layouts</li>
+                            <li>Footer navigation</li>
+                            <li>Sign-up page</li>
+                            <li>Dropdown menus</li>
+                            <li>Social media integration</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>In Progress</h3>
+                        <ul class="project-tech-list">
+                            <li>No active development.</li>
+                            <li>
+                                Project completed as a front-end portfolio piece.
+                            </li>
+                            <li>Future improvements listed separately.</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Future Ideas</h3>
+                        <ul class="project-tech-list">
+                            <li>Game update announcements</li>
+                            <li>User accounts</li>
+                            <li>Interactive build planner</li>
+                            <li>Boss strategy pages</li>
+                            <li>Search functionality</li>
+                            <li>Comment system</li>
+                            <li>Interactive maps</li>
+                            <li>Build calculators</li>
+                            <li>Community forums</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="content-section">
+            <div class="container">
+                <h2>Media and Links</h2>
+                <div class="project-grid">
+                    <article class="project-tile">
+                        <h3>Project Repository</h3>
+                        <p>
+                            Explore the complete source code for EldenGuides, including the responsive layouts,
+                            navigation system, page structure, and styling used throughout the project.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-box-button github-button" href="https://github.com/jareda034/NCinema"
+                                target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                        </div>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Live Demo</h3>
+                        <p>
+                            View the live website to explore the responsive interface, navigation system, guide pages,
+                            and overall user experience.
+                        </p>
+                        <div class="project-links">
+                            <a class="project-box-button github-button"
+                                href="https://nc-cinema-booking-5e9a5e0e5b5d.herokuapp.com/" target="_blank"
+                                rel="noopener noreferrer">View Live</a>
+                        </div>
+                    </article>
+
+                    <article class="project-tile">
+                        <h3>Technical Notes</h3>
+                        <p>
+                            EldenGuides was developed using HTML and CSS with a strong focus on responsive web design
+                            and user experience. The website features semantic HTML structure, responsive navigation,
+                            dropdown menus, and consistent page layouts that adapt across desktop and mobile devices. A
+                            game-inspired colour palette, imagery, and embedded media were used to create an immersive
+                            browsing experience while maintaining readability and accessibility. Throughout the project
+                            I strengthened my understanding of front-end development, responsive layouts, CSS styling,
+                            navigation design, and creating user-focused websites.
+                        </p>
+                        <h4 class="project-tech-heading">Technologies Used</h4>
+
+                        <ul class="project-tech-list">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Git</li>
+                            <li>GitHub Pages</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <h2 id="contact-heading">Project Contact</h2>
+            <nav aria-label="Contact links">
+                <ul id="contact-bar">
+                    <li class="nav-item">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jakigbesotewm@gmail.com&su=Marsh%27s%20Run%20Project%20Inquiry"
+                            target="_blank" rel="noopener noreferrer">Email</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.linkedin.com/in/jared-akigbesote-3b79b0327/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/jareda034" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://ping-wing.itch.io/" target="_blank" rel="noopener noreferrer">Itch.io</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
